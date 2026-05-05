@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/Goldziher/ai-rulez
-    rev: v4.1.0
+    rev: v4.1.6
     hooks:
       - id: ai-rulez-generate
 
@@ -16,28 +16,20 @@ repos:
       - id: check-added-large-files
 
   # Ruby formatting and linting
-  - repo: https://github.com/rubocop/rubocop
-    rev: v1.86.1
-    hooks:
-      - id: rubocop
-        args: [--autocorrect]
-
-  # Typos
   - repo: https://github.com/crate-ci/typos
-    rev: v1.45.2
+    rev: v1.46.0
     hooks:
       - id: typos
 
   # Shell
-  - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.13.1-1
-    hooks:
-      - id: shfmt
-
-  # Commit message linting
   - repo: https://github.com/Goldziher/gitfluff
     rev: v0.8.0
     hooks:
       - id: gitfluff-lint
         args: ["--write"]
         stages: [commit-msg]
+  - repo: https://github.com/kreuzberg-dev/pre-commit-hooks
+    rev: v1.0.0
+    hooks:
+      - id: rubocop
+      - id: shfmt
