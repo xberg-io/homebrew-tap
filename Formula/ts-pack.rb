@@ -9,6 +9,14 @@ class TsPack < Formula
   sha256 "d3f795def03a187374de6c4ac93b782d6cd4f112f1ba10000ef7381300defae9"
   license any_of: ["MIT", "Apache-2.0"]
 
+  bottle do
+    root_url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v1.8.0-rc.42"
+    sha256 cellar: "null", : "null"
+    sha256 cellar: "null", : "null"
+    sha256 cellar: "null", : "null"
+    sha256 cellar: "null", : "null"
+  end
+
   depends_on "rust" => :build
 
   def install
