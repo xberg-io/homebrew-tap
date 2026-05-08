@@ -4,25 +4,30 @@
 class LibhtmlToMarkdown < Formula
   desc 'C library for HTML to Markdown conversion (FFI bindings)'
   homepage 'https://github.com/kreuzberg-dev/html-to-markdown'
-  version '2.25.2'
+  version '3.4.0-rc.41'
   license 'MIT'
 
   on_macos do
     on_arm do
-      url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-ffi-#{version}-darwin-arm64.tar.gz"
-      sha256 '0000000000000000000000000000000000000000000000000000000000000000'
+      url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
+      sha256 '68ca05416840a3c3ab2534e977717cf3d78dfb14eb70aa8588f30bff7088e72b'
+    end
+
+    on_intel do
+      url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-x86_64-apple-darwin.tar.gz"
+      sha256 '6cf19bbf9deb2ec48bd09a32bfb5353e08622d2c518983b6aa424359687e912b'
     end
   end
 
   on_linux do
-    on_intel do
-      url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-ffi-#{version}-linux-x64.tar.gz"
-      sha256 '0000000000000000000000000000000000000000000000000000000000000000'
+    on_arm do
+      url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 '4c2dd0085b55a76b1c57e7857ba8187daaba52dab0d7cdd000909559918abd28'
     end
 
-    on_arm do
-      url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-ffi-#{version}-linux-arm64.tar.gz"
-      sha256 '0000000000000000000000000000000000000000000000000000000000000000'
+    on_intel do
+      url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 'e1ba118c1d6c47e1facc6f1c9af2bf43268b47822bdbf91eb7d1bbfcc3581806'
     end
   end
 
@@ -36,12 +41,11 @@ class LibhtmlToMarkdown < Formula
     end
     lib.install Dir['lib/*.a']
 
-    (lib / 'pkgconfig').install 'lib/pkgconfig/html-to-markdown.pc'
+    (lib / 'pkgconfig').install 'share/pkgconfig/html-to-markdown-rs.pc'
 
-    # Patch prefix in pkg-config file
-    inreplace lib / 'pkgconfig/html-to-markdown.pc', 'prefix=/usr/local', "prefix=#{prefix}"
+    inreplace lib / 'pkgconfig/html-to-markdown-rs.pc', /prefix=.*/, "prefix=#{prefix}"
 
-    (lib / 'cmake/html-to-markdown-ffi').install Dir['cmake/*']
+    (lib / 'cmake/html-to-markdown-rs').install Dir['lib/cmake/html-to-markdown-rs/*']
   end
 
   test do
@@ -50,7 +54,7 @@ class LibhtmlToMarkdown < Formula
       #include <stdio.h>
       int main(void) {
           const char *v = html_to_markdown_version();
-          printf("html-to-markdown %s\\n", v);
+          printf("html-to-markdown %s\n", v);
           return v ? 0 : 1;
       }
     C
