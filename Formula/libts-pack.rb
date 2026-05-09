@@ -9,10 +9,10 @@ class LibtsPack < Formula
 
   bottle do
     root_url 'https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v1.8.0-rc.42'
-    sha256 cellar: 'any_skip_relocation', arm64_linux: '71f263ef59c6260dd490a042c5fad61664192dfaad74f4e02390a6d3246f3703'
-    sha256 cellar: 'any', arm64_sequoia: '921e9796f174b01f09236cd1eb58f7650cc70ee66c19ffbeac511c02f0d4c2c4'
-    sha256 cellar: 'any', sequoia: 'd799b45c6093e6be6a0067b406bb350ee8de330d26c8eab42d2f34826c89c66f'
-    sha256 cellar: 'any_skip_relocation', x86_64_linux: '5b3ad0fa56c5ff221e1cd6dce5a1f6094a23d33892e7d34be7a0945d47a73800'
+    sha256 cellar: :any_skip_relocation, arm64_linux: '71f263ef59c6260dd490a042c5fad61664192dfaad74f4e02390a6d3246f3703'
+    sha256 cellar: :any, arm64_sequoia: '921e9796f174b01f09236cd1eb58f7650cc70ee66c19ffbeac511c02f0d4c2c4'
+    sha256 cellar: :any, sequoia: 'd799b45c6093e6be6a0067b406bb350ee8de330d26c8eab42d2f34826c89c66f'
+    sha256 cellar: :any_skip_relocation, x86_64_linux: '5b3ad0fa56c5ff221e1cd6dce5a1f6094a23d33892e7d34be7a0945d47a73800'
   end
 
   on_macos do
