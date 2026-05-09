@@ -4,36 +4,30 @@
 class LibtsPack < Formula
   desc "C library for tree-sitter language pack (FFI bindings)"
   homepage "https://github.com/kreuzberg-dev/tree-sitter-language-pack"
-  version "1.8.0-rc.43"
+  version "1.8.0-rc.44"
   license any_of: ["MIT", "Apache-2.0"]
-
-  bottle do
-    root_url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v1.8.0-rc.43"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "8326d2bad1d5da3fcb019747dabab468c3510e2c98bad707b167a7a0dd45d6aa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c1caa9ebd03be9ad62bbe2670b4ef78dab6fca76b6601fc018db74590df3638a"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "8b2c26dc15a75772ab336721ba9a90ec63ed17ee04b11118d6c7f9d69bd25bcf"
+      sha256 "9f67f6ce3613dbcfa1abc99b1a9e57e1eca8fe5fa3b7f4574ee3707cd58934ff"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "8789906f9151aeb6a43f70a17955cc1e2d10cc9088dc2c9074ad7e862236cb41"
+      sha256 "04c5be98ad4f3cc5fd2e066bb9552a6f060cc2492583dc8db792bc6ecbc23ffd"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "2a6eb22ed2ec2cd4efe1ae45b22d1338c6d494259b7c158db16ce01f5be73c3c"
+      sha256 "4b6bb47066ce8913dc0cd7441ff942b5e29a539cbb287d8991e78d72475cb807"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c6aa7728d9774bd274e115730476a5c3f97d686443eed2acf4a7eff4f7e8bdf7"
+      sha256 "86e18958018578dbc7d5ee67e601d4075bd9cc9909afdd8c256f66f01fe8f3b3"
     end
   end
 
