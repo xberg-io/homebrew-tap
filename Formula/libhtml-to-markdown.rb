@@ -4,38 +4,30 @@
 class LibhtmlToMarkdown < Formula
   desc "C library for HTML to Markdown conversion (FFI bindings)"
   homepage "https://github.com/kreuzberg-dev/html-to-markdown"
-  version "3.5.0-rc.1"
+  version "3.5.0-rc.2"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v3.5.0-rc.1"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "49f992eb4a80aa033d47800db1008290b25df58f70058c3c06265128f0e6b580"
-    sha256 cellar: :any, arm64_sequoia: "11ec19cca6f52cb616e129c5f12bb04fc0fcaa037ad0e8ae9776babecdd93073"
-    sha256 cellar: :any, sequoia: "92979cef2691c03d72008b5fe95a7e11c9ae0d13232b54b2e8391697ce9cb58f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "8cbdd81edfe195b3cac4baf7e053fbf6936f87cc5249a94bece2cf7c32d27730"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "4c180dfd94b9308e852060ec12b5d8ff7e59c9e97815df06bd6c1bf49dd8525e"
+      sha256 "b8e6a0ebfd82fa7725ca35f8d2e6ada7f2701083622db67c5818d80e26684bf9"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "f89f9f3b088eae180cbae4f8afaba521873529cdbb453c74158e75fb413ee0d8"
+      sha256 "6da94e556794067e70af6d5d5ed50141fcde590bd7ba71e7a5187db3a15c304d"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a8600c301e117d00027e78a217aabf60e234673f9a6afd2db7dd6d7e9b4d4f74"
+      sha256 "5460a3752f57def8f133896d2bf6ad63a997e7f8c8cf7c88e77532c14a7f49ce"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "70462b04abceb080df2f7b44d8144be4520b6dc92642ee54b3679907e4eed1fd"
+      sha256 "2ca3414176149de679c2f7c690d995be68f7a01677500f681a439363fea8a294"
     end
   end
 
@@ -62,7 +54,7 @@ class LibhtmlToMarkdown < Formula
       #include <stdio.h>
       int main(void) {
           const char *v = html_to_markdown_version();
-          printf("html-to-markdown %s\n", v);
+          printf("html-to-markdown %s\\n", v);
           return v ? 0 : 1;
       }
     C
