@@ -4,30 +4,30 @@
 class HtmlToMarkdown < Formula
   desc "High-performance HTML to Markdown converter powered by Rust"
   homepage "https://github.com/kreuzberg-dev/html-to-markdown"
-  version "3.5.0-rc.2"
+  version "3.5.0-rc.3"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/cli-aarch64-apple-darwin.tar.gz"
-      sha256 "07b9436c84efe9d2df9ff32721a120747fa17fa893837edce2aeb7075ea7d02a"
+      sha256 "1f96bdba5ccd936aaca61740f2715f6c23ff9ad699ced9f4cb68bba6e748dfab"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/cli-x86_64-apple-darwin.tar.gz"
-      sha256 "5484f43a112f618d5defba523ce17fe258ba625c38ae76e01828e787223b6134"
+      sha256 "dfab33eef1c7b112f94579bbc7e6b776e73c7cdf47f0df312c78fa060f7d7951"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/cli-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a306cebc1cf14486839e87dc9a96dc077cb72dd127b37f35b03b71916f27c4f5"
+      sha256 "955ff5300aa8294f4503778bbb6a8883d26dc88d3937904da7647e3edfb6d5dc"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "95a727fdc4d6fee2be5f3152aa699bc6cdeabea40ee0430de8be1afbde2eb515"
+      sha256 "c45f3d32906b28b4bb040ce5a9fc466eb7b098ad8e0ca8e13f912f8dd03228f7"
     end
   end
 
