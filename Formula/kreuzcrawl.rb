@@ -10,11 +10,11 @@ class Kreuzcrawl < Formula
   head 'https://github.com/kreuzberg-dev/kreuzcrawl.git', branch: 'main'
 
   bottle do
-    root_url "https://github.com/kreuzberg-dev/kreuzcrawl/releases/download/v0.3.0-rc.27"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "1b716ad6b217f2b62cd8c5cf16c5a0d6b3fa5e0a8a29afd450caf200d5627805"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3f3e97fb93806d0ef9fa6bf0be6ade5646e0736cd34567bcbdcd6183a4d2ad14"
-    sha256 cellar: :any_skip_relocation, sequoia: "dba018529960835ee3c95ce6ded390f4fd95a969a6820de831d5882b2f8c7e5c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "7d6cd991f022ef26681ff892bae163495dd55ec8731c9ee435f81b5d7db173f8"
+    root_url "https://github.com/kreuzberg-dev/kreuzcrawl/releases/download/v0.3.0-rc.28"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "cd07bfb2f43bbd5c3117d40c81911e5ee6bda0a8f22c634cb75130092d64d5d6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0127b12ef5c5c5ff6c34c3fdd08dbf7a16f593274348b6d997c2220a59bd8ad6"
+    sha256 cellar: :any_skip_relocation, sequoia: "c9e364c27f0e105c1f5fc1efefa508c3b5ce738e38cf8f23cd08bc56576fdcb4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "be10d9bdc7aa2a6adf874ff99c50358ee1eea6bbc7146668eb0d3f4fb3066ac0"
   end
 
   depends_on 'cmake' => :build
