@@ -4,30 +4,30 @@
 class LibtsPack < Formula
   desc "C library for tree-sitter language pack (FFI bindings)"
   homepage "https://github.com/kreuzberg-dev/tree-sitter-language-pack"
-  version "1.9.0-rc.13"
+  version "1.9.0-rc.14"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "ea0d09df84fc1b86bf9e9dbe90f444cb0da9f88d9c762fd2f5283b249f7f7558"
+      sha256 "1c7168f25cb0e667ef6a31d36b4531c284a89691cf96194a8b1a0667b9377d7b"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "0bdf82b8dc9e052120024f2b3474e6370e3a02bb1e3c918961c4a51dd523a374"
+      sha256 "d0c01bf0933c80c0148e0bf95c8537f0c3fbafc9f4693617b3f4b8cfa21252c8"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b3e4c2c6b33460d227de4dd419b1fd851316564365f06bce006d11250604c4a8"
+      sha256 "8800012f007127566c18f001e99546d6da00d4310ec68479f8ecef51f3ef5ddb"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3afa6b4851a68f7f3dc5aeb824024c9c99c03511989bda19c283f1c2be5ca792"
+      sha256 "b312d8c0db444207fda86d52ba9f99bcee3bc9f0727ced56187f63d887f6de99"
     end
   end
 
@@ -55,7 +55,7 @@ class LibtsPack < Formula
       int main(void) {
           /* Smoke: verify a known symbol resolves at link time. */
           (void) ts_pack_available_languages;
-          printf("ts_pack OK\n");
+          printf("ts_pack OK\\n");
           return 0;
       }
     C
