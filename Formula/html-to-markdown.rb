@@ -4,38 +4,30 @@
 class HtmlToMarkdown < Formula
   desc "High-performance HTML to Markdown converter powered by Rust"
   homepage "https://github.com/kreuzberg-dev/html-to-markdown"
-  version "3.6.0-rc.2"
+  version "3.6.0-rc.3"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v3.6.0-rc.2"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "463597a8ce1e4ab51d24a474e2bf1d66a6eecb9cc632c4b0f43e61c07ffb41b5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "90bd5703169e7ca3f3484f45279644f95e84007d757f6f46448ea3482c728561"
-    sha256 cellar: :any_skip_relocation, sequoia: "eae77c80acd2ffa9187c289f81fffcc2f79e9e96e2e29ce3e2d50c68523b30f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "04639ba50270e9f69bc190e266f4ca0f7323c038f3ec7c316f4862c8e82ac120"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/cli-aarch64-apple-darwin.tar.gz"
-      sha256 "a3eaa91c7ea1a9afa1d589bee8ead7ab368de7aa9d380551d413583f839dbf60"
+      sha256 "17468929ec8395ae60865bfe4e269114b259aa84af77c2eaceb04277a19d9f04"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/cli-x86_64-apple-darwin.tar.gz"
-      sha256 "fee98b7534df983691f374f1338c765b57ea3759f36ff4103446514d5a049e88"
+      sha256 "d2ae20c9abb3e3304c19a030a5545da6a902038603924be2bd3e1619a85bb4e5"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/cli-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "178e1d511b761ba8c5a27ef3cd3edc4cb4879c66de4b692f8861b20dad378034"
+      sha256 "0c36db475daf51573b7c99b8982ac5ac572d9498990797cbc5476b058e47a12b"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/html-to-markdown/releases/download/v#{version}/cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "fc2fe4385b0a6354c4e5547a75f25b58232afa20ba320e87fb6dcfb12f7f69c4"
+      sha256 "4bb99553b30f4b8762a2ef73ebceacc6272c106ee445623cad5fbd55e843d0e7"
     end
   end
 
