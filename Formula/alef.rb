@@ -9,11 +9,11 @@ class Alef < Formula
   license 'MIT'
 
   bottle do
-    root_url "https://github.com/kreuzberg-dev/alef/releases/download/v0.23.23"
-    sha256 cellar: :any, arm64_linux: "7e4f20f3d8dd289570fb83d53c7017f945d1053c8c9946362c8df80e0f3e7210"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3c004fe734e45f787c2bf6c0477c179999d6b89c24ce465a0be5c66a5af50f16"
-    sha256 cellar: :any_skip_relocation, sequoia: "ba279b7391cb9d4be4ed63b40248cbc8c34c6c2e76bf549988046881d408049a"
-    sha256 cellar: :any, x86_64_linux: "986ff9f16f07a7609a9d902f17f236bc2f7776d87f92cc06b3dd259540b437f1"
+    root_url "https://github.com/kreuzberg-dev/alef/releases/download/v0.23.24"
+    sha256 cellar: :any, arm64_linux: "6d2c3b645010f1d257247ee98fde8dba87d27094a508bdcbe38ee6e3d02b8011"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "65bb9921dda137dd84ad95dba0e889a8cbe96a31b2a72d0db420adf5fd3910da"
+    sha256 cellar: :any_skip_relocation, sequoia: "b71c8e16c50f910d11ccdb043e706216f9eb2ac49e17c7801edcc74ecb91d96b"
+    sha256 cellar: :any, x86_64_linux: "189fe1c21eb9bb8ffe72e0ddf08113a97e429f3d21cde9f01766780e866ca59c"
   end
 
   head 'https://github.com/kreuzberg-dev/alef.git', branch: 'main'
