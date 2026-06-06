@@ -7,6 +7,14 @@ class TsPack < Formula
   version "1.9.0-rc.23"
   license any_of: ["MIT", "Apache-2.0"]
 
+  bottle do
+    root_url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v1.9.0-rc.23"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "a33f45181cb7f649bc07760b65cdb79484a7ab98c0b899c7667a8b23d95d028b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a362c8cdefd6c9dece572173bf84da02021546c44ee043340538ed99a415fa23"
+    sha256 cellar: :any_skip_relocation, sequoia: "3dae784f613d2b4e84d5581bf72f53a0b90028a976a06122a63a8b8a8cfa13da"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "85a247b426f23ef0b648f812182af78fb91d509798dce62eee97ea5ee41e4d5a"
+  end
+
   on_macos do
     on_arm do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-macos-arm64.tar.gz"
