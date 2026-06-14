@@ -4,8 +4,8 @@
 class Kreuzcrawl < Formula
   desc 'High-performance web crawling engine CLI'
   homepage 'https://github.com/kreuzberg-dev/kreuzcrawl'
-  url 'https://github.com/kreuzberg-dev/kreuzcrawl/archive/v0.3.0-rc.60.tar.gz'
-  sha256 '22054141c1cb1007aa03e42fef316c8ac2ee45bc7d658db7c930818be7d92427'
+  url 'https://github.com/kreuzberg-dev/kreuzcrawl/archive/v0.3.0-rc.61.tar.gz'
+  sha256 'edc386cd6b25f0f4fc3d5df68479f1676b9e08da818fea433edf369e3852aabe'
   license 'Elastic-2.0'
 
   bottle do
