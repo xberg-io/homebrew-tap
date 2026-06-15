@@ -4,8 +4,8 @@
 class Alef < Formula
   desc 'Opinionated polyglot binding generator for Rust libraries'
   homepage 'https://github.com/kreuzberg-dev/alef'
-  url "https://github.com/kreuzberg-dev/alef/archive/v0.25.11.tar.gz"
-  sha256 "265b7071e017ac97817f06e833c0c994a2c7527d36fb8be4f25fca0e76ef3574"
+  url "https://github.com/kreuzberg-dev/alef/archive/v0.25.12.tar.gz"
+  sha256 "de73ccedff1a9a021169fba2d0db7c0163e0ec4c0e74446aaf00d3d6f33f37bd"
   license 'MIT'
 
   bottle do
