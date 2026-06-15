@@ -4,38 +4,30 @@
 class LibtsPack < Formula
   desc "C library for tree-sitter language pack (FFI bindings)"
   homepage "https://github.com/kreuzberg-dev/tree-sitter-language-pack"
-  version "1.9.0-rc.47"
+  version "1.9.0-rc.48"
   license any_of: ["MIT", "Apache-2.0"]
-
-  bottle do
-    root_url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v1.9.0-rc.47"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "a5b5fead2b334d4cc34aed22c483c831ede96216e780c06b05e26094694722cc"
-    sha256 cellar: :any, arm64_sequoia: "da4eb2d4e978cab18e7d22b599803a37088b261afb479810297d75aaddf0fa6a"
-    sha256 cellar: :any, sequoia: "c1e2779b4e912be54d1bb245b15e9bc0087f72f9bc25d72ecce93300e52111e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b914fa80cef6e2603af2071b643c81fad3c467e18b30b80d8e563ca7f9211b92"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "574fb8097278114eae96810c1c9e15ee52180143831de598a3c64222ee4e849e"
+      sha256 "902d5255de9bcc0f310da0d2a91f253933bf85815ad283dec6fa7481508f777c"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "8774a67cece5dea6805076ed653393b1f375fe49d57e18e759b2ccef012f339d"
+      sha256 "2d6bf2579bdb06d22c124e1dd3b8149939f139834623f7c6660f0014b773e3b3"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "82ef670dcde3997d4fa153ecdde2b2edecec384eeb8d206217e6649ed817fcf8"
+      sha256 "54ce04675255f9eb1ac49106f64d802f2f5c299f6db0ace9a340bc57b79b59eb"
     end
 
     on_intel do
       url "https://github.com/kreuzberg-dev/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1e1c813113b48299172fb00a732322a5d973b4c563467bfa4a199bece103507a"
+      sha256 "f7bbdeedd54e0695c40d2d78ab5755bb4f51d4efaa1dbbc2561702f7cb78df01"
     end
   end
 
