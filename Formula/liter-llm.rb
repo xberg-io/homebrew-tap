@@ -9,11 +9,11 @@ class LiterLlm < Formula
   license 'MIT'
 
   bottle do
-    root_url "https://github.com/kreuzberg-dev/liter-llm/releases/download/v1.7.4"
-    sha256 cellar: :any, arm64_linux: "662488d99041731061ccd25d609d3b347b68ee196e011b8aa70a29952043858f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c8e9941cea1ea1b6ea2978aaa7ce0bbc215ce0e1fdf46ac07daeeb9ea081a642"
-    sha256 cellar: :any_skip_relocation, sequoia: "ad6bbfe5d73b8a0086a26fb8877a08a574b7fdaf3543e94d230ac8ce8324b604"
-    sha256 cellar: :any, x86_64_linux: "a326d70d127edb2e7b911f4a96c25da22acdc6893170ab2237f4a70c3137f513"
+    root_url "https://github.com/kreuzberg-dev/liter-llm/releases/download/v1.7.5"
+    sha256 cellar: :any, arm64_linux: "9e56766720f98adfc1510c1eeb7ad8dadfddee1382f85f8021f59fdda97e4431"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8dd1917c4fbb4e709f34761e4d08a08cd32a5f455af088529fdd5457b94ac3f5"
+    sha256 cellar: :any_skip_relocation, sequoia: "502f2ba2fc3329d8c5ac7011cea7d1f3dabc2f8b71309d9e8efbdf011f0bcdea"
+    sha256 cellar: :any, x86_64_linux: "70a05163ebce2f9034d9a44a9f3d2f0e6d4a94223af252e4216df7b9050c7588"
   end
 
   head 'https://github.com/kreuzberg-dev/liter-llm.git', branch: 'main'
