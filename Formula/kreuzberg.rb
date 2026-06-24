@@ -27,6 +27,7 @@ class Kreuzberg < Formula
   def install
     ENV['OPENSSL_DIR'] = Formula['openssl'].opt_prefix
     system 'cargo', 'install', '--features', 'api,mcp,mcp-http', *std_cargo_args(path: 'crates/kreuzberg-cli')
+    bin.install_symlink bin/'kreuzberg' => 'xberg'
   end
 
   test do
