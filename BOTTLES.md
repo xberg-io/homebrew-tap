@@ -57,7 +57,7 @@ When bottles are ready for release:
 2. **Update `Formula/kreuzberg.rb`**:
    ```ruby
    bottle do
-     root_url "https://github.com/kreuzberg-dev/kreuzberg/releases/download/vX.Y.Z"
+     root_url "https://github.com/xberg-io/kreuzberg/releases/download/vX.Y.Z"
      sha256 cellar: :any_skip_relocation, arm64_sequoia: "actual_hash_here"
      sha256 cellar: :any_skip_relocation, arm64_sonoma: "actual_hash_here"
      sha256 cellar: :any_skip_relocation, ventura: "actual_hash_here"
@@ -88,7 +88,7 @@ When releasing a new version with bottles:
 1. Check macOS/Linux version matches supported platforms
 2. Verify SHA256 hashes in formula are correct
 3. Confirm bottles exist at the `root_url` with correct filenames
-4. Run `brew tap --repair kreuzberg-dev/tap` to refresh tap cache
+4. Run `brew tap --repair xberg-io/tap` to refresh tap cache
 
 ### Bottle is missing a platform
 
@@ -123,4 +123,4 @@ homebrew-tap/
 
 - [Homebrew Bottle Documentation](https://docs.brew.sh/Bottles)
 - [Homebrew Formula Cookbook](https://docs.brew.sh/Formula-Cookbook)
-- [Kreuzberg GitHub Releases](https://github.com/kreuzberg-dev/kreuzberg/releases)
+- [Kreuzberg GitHub Releases](https://github.com/xberg-io/kreuzberg/releases)

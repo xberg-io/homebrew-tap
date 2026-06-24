@@ -10,6 +10,6 @@ builtins = ['ruby', 'default-commands']
 
 [[includes]]
 name = 'kreuzberg-core'
-source = 'https://github.com/kreuzberg-dev/ai-rulez.git'
+source = 'https://github.com/xberg-io/ai-rulez.git'
 path = 'modules/core'
 merge_strategy = 'local-override'

@@ -1,11 +1,11 @@
-# kreuzberg-dev/homebrew-tap
+# xberg-io/homebrew-tap
 
 Homebrew tap for Kreuzberg packages.
 
 ## Installation
 
 ```bash
-brew tap kreuzberg-dev/tap
+brew tap xberg-io/tap
 brew install kreuzberg
 ```
 
@@ -29,5 +29,5 @@ Pre-built bottles are available for:
 
 ```bash
 brew uninstall kreuzberg
-brew untap kreuzberg-dev/tap
+brew untap xberg-io/tap
 ```
