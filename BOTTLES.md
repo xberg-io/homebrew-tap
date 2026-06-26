@@ -5,6 +5,7 @@ This document describes how Xberg bottles are built, distributed, and maintained
 ## What are Homebrew Bottles?
 
 Homebrew bottles are pre-compiled binaries packaged for specific macOS/Linux platforms. They provide:
+
 - **Fast installation**: ~10 seconds vs. 5-15 minutes compiling from source
 - **Reduced build dependencies**: No need for Rust, CMake, or pkg-config on the user's machine
 - **Reliable builds**: Consistent binary across installations on the same platform
@@ -12,6 +13,7 @@ Homebrew bottles are pre-compiled binaries packaged for specific macOS/Linux pla
 ## Supported Platforms
 
 Pre-built bottles are available for:
+
 - **macOS ARM64 (Sequoia)** - Latest Apple Silicon Macs
 - **macOS ARM64 (Sonoma)** - Apple Silicon Macs (2021+)
 - **macOS Intel (Ventura)** - Intel-based Macs running Ventura or later
@@ -29,6 +31,7 @@ cd homebrew-tap
 ```
 
 This script:
+
 1. Installs xberg with `--build-bottle` flag (optimized for binary distribution)
 2. Runs `brew bottle` to generate the bottle file (.tar.gz)
 3. Outputs the SHA256 hash needed for the formula
@@ -42,6 +45,7 @@ Bottles should be built in CI for each target platform:
 3. **macOS Intel**: Build on GitHub Actions' `macos-13` runner (Intel)
 
 Each build should:
+
 ```bash
 brew install --build-bottle xberg
 brew bottle xberg
@@ -55,6 +59,7 @@ When bottles are ready for release:
 
 1. **Get SHA256 hashes** from `brew bottle` output for each platform
 2. **Update `Formula/xberg.rb`**:
+
    ```ruby
    bottle do
      root_url "https://github.com/xberg-io/xberg/releases/download/vX.Y.Z"
@@ -64,6 +69,7 @@ When bottles are ready for release:
      sha256 cellar: :any_skip_relocation, x86_64_linux: "actual_hash_here"
    end
    ```
+
 3. **Update `root_url`** to point to the release version
 4. **Upload bottles** to GitHub Releases under the corresponding version tag
 5. **Test locally**: `brew install xberg` should use the bottle, not build from source
@@ -93,6 +99,7 @@ When releasing a new version with bottles:
 ### Bottle is missing a platform
 
 Add placeholders to the formula and schedule a CI build for that platform:
+
 ```ruby
 sha256 cellar: :any_skip_relocation, arm64_ventura: "will_update_after_build"
 ```
@@ -108,7 +115,7 @@ Then update with real hash after the build completes.
 
 ## File Structure
 
-```
+```text
 homebrew-tap/
 ├── Formula/
 │   └── xberg.rb          # Main formula with bottle block
