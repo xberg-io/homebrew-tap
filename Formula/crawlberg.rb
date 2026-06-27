@@ -4,8 +4,8 @@
 class Crawlberg < Formula
   desc 'High-performance web crawling engine CLI'
   homepage 'https://github.com/xberg-io/crawlberg'
-  url 'https://github.com/xberg-io/crawlberg/archive/v1.0.0-rc.2.tar.gz'
-  sha256 '14c9fdb6fc2c0341945e055faf8769fedcc3e660972a06767be33d0de05b5598'
+  url 'https://github.com/xberg-io/crawlberg/archive/v1.0.0.tar.gz'
+  sha256 '5222b70e7f01fd06cbd697bf94af3564e6c047d9b5ca10b1d7209970cff73413'
   license 'Elastic-2.0'
 
   bottle do
