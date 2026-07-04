@@ -4,30 +4,30 @@
 class TsPack < Formula
   desc "Tree-sitter language pack CLI - download and manage 306 parser grammars"
   homepage "https://github.com/xberg-io/tree-sitter-language-pack"
-  version "1.12.3"
+  version "1.12.4"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-macos-arm64.tar.gz"
-      sha256 "47cb28d471426a4ef3ee53b307108c3df4bb76e96f1ff6c37c21c820d62d60e6"
+      sha256 "4db5ef7ebcf2d13b80371a7c190d835ceccae885584cf3a7e9fbd1015c3c45e6"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-macos-x86_64.tar.gz"
-      sha256 "ff65649edf74b21cf9bc2a25f0382de58c39e90fd335bed1b75f3bd5851ad1e7"
+      sha256 "021d298d347598ea72d6baec4262a5f085165fb24043d2e55f51fae0a680060d"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-linux-aarch64.tar.gz"
-      sha256 "96738b5627a89778a784b59e74a462a94e098f3acfce452f96c0af5cb08ab6a7"
+      sha256 "39ba1924c42352428d58db4f9ac24a5c0ab0e0cd04652e994fba0b365bff4b2c"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-linux-x86_64.tar.gz"
-      sha256 "5ac812bc399004b49dd6074cab698f9b5e9c521862d8dc8a45f70b897475871d"
+      sha256 "9f36d7c9b57e82fc86c20cf9cacf244a6f59192515b9e2447025a55c284c957d"
     end
   end
 
