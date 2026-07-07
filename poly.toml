@@ -19,7 +19,7 @@ trim_trailing_whitespace = true
 stages = ["pre-commit"]
 
 [hooks.builtin]
-polylint = { exclude = [
+lint = { exclude = [
     "**/*.lock",
     "**/Cargo.lock",
     "**/go.sum",
@@ -27,7 +27,7 @@ polylint = { exclude = [
     "**/pnpm-lock.yaml",
     "**/uv.lock",
 ] }
-polyfmt = { exclude = [
+fmt = { exclude = [
     "**/*.lock",
     "**/Cargo.lock",
     "**/go.sum",
@@ -57,12 +57,3 @@ enabled = true
 
 [tools.actionlint]
 enabled = true
-
-# --- lightweight inline script hooks (no toolchain) ---
-[hooks.pre-commit.scripts.ai_rulez_generate]
-# TODO: wire to vendored script / task target (was a shared pre-commit-hooks hook).
-run = "TODO-ai-rulez-generate"
-
-[hooks.pre-commit.scripts.gh_actions_updater]
-# TODO: wire to vendored script / task target (was a shared pre-commit-hooks hook).
-run = "TODO-gh-actions-updater"
