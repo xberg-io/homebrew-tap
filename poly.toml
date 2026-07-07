@@ -19,6 +19,10 @@ trim_trailing_whitespace = true
 stages = ["pre-commit"]
 
 [hooks.builtin]
+# Formula/*.rb are Homebrew formulas: they follow Homebrew DSL idiom (`url "..."`
+# without parens, EOS heredocs, etc.) and are audited by `brew style`, not poly's
+# generic rubocop. Exclude them so the hooks don't rewrite them into non-idiomatic
+# Ruby that `brew audit` would then reject.
 lint = { exclude = [
     "**/*.lock",
     "**/Cargo.lock",
@@ -26,6 +30,7 @@ lint = { exclude = [
     "**/package-lock.json",
     "**/pnpm-lock.yaml",
     "**/uv.lock",
+    "Formula/**",
 ] }
 fmt = { exclude = [
     "**/*.lock",
@@ -34,6 +39,7 @@ fmt = { exclude = [
     "**/package-lock.json",
     "**/pnpm-lock.yaml",
     "**/uv.lock",
+    "Formula/**",
 ] }
 commit = { stages = ["commit-msg"] }
 file_safety = { exclude = [
