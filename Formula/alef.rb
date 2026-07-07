@@ -2,11 +2,11 @@
 # frozen_string_literal: true
 
 class Alef < Formula
-  desc 'Opinionated polyglot binding generator for Rust libraries'
-  homepage 'https://github.com/xberg-io/alef'
+  desc "Opinionated polyglot binding generator for Rust libraries"
+  homepage "https://github.com/xberg-io/alef"
   url "https://github.com/xberg-io/alef/archive/v0.33.0.tar.gz"
   sha256 "a64129ff27997a870a8aa488f915974320c75c2573b43fcc2069261c2f667ac0"
-  license 'MIT'
+  license "MIT"
 
   bottle do
     root_url "https://github.com/xberg-io/alef/releases/download/v0.33.0"
@@ -16,15 +16,15 @@ class Alef < Formula
     sha256 cellar: :any, x86_64_linux: "ac25e4d721040d777260b555949a6ce9d21e0f3ef20a7b2af6923d3373254a38"
   end
 
-  head 'https://github.com/xberg-io/alef.git', branch: 'main'
+  head "https://github.com/xberg-io/alef.git", branch: "main"
 
-  depends_on 'rust' => :build
+  depends_on "rust" => :build
 
   def install
-    system 'cargo', 'install', *std_cargo_args
+    system("cargo", "install", *std_cargo_args)
   end
 
   test do
-    system "#{bin}/alef", '--help'
+    system "#{bin}/alef", "--help"
   end
 end

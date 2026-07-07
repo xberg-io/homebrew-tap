@@ -2,11 +2,11 @@
 # frozen_string_literal: true
 
 class LiterLlm < Formula
-  desc 'Universal LLM API client with native bindings for 14 languages'
-  homepage 'https://xberg.io'
+  desc "Universal LLM API client with native bindings for 14 languages"
+  homepage "https://xberg.io"
   url "https://github.com/xberg-io/liter-llm/archive/v1.9.3.tar.gz"
   sha256 "d163b88cdca064f897c26432b35d43fb1bcf6895d754672d9c069f880cb697b0"
-  license 'MIT'
+  license "MIT"
 
   bottle do
     root_url "https://github.com/xberg-io/liter-llm/releases/download/v1.9.3"
@@ -16,12 +16,12 @@ class LiterLlm < Formula
     sha256 cellar: :any, x86_64_linux: "fe570a9fcd4c31ec469b19c490aafaad86b343be3c87827d33afa59706e15a8d"
   end
 
-  head 'https://github.com/xberg-io/liter-llm.git', branch: 'main'
+  head "https://github.com/xberg-io/liter-llm.git", branch: "main"
 
-  depends_on 'rust' => :build
+  depends_on "rust" => :build
 
   def install
-    system 'cargo', 'install', *std_cargo_args(path: 'crates/liter-llm-cli')
+    system("cargo", "install", *std_cargo_args(path: "crates/liter-llm-cli"))
   end
 
   test do

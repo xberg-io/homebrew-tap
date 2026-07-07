@@ -2,11 +2,11 @@
 # frozen_string_literal: true
 
 class Crawlberg < Formula
-  desc 'High-performance web crawling engine CLI'
-  homepage 'https://github.com/xberg-io/crawlberg'
-  url 'https://github.com/xberg-io/crawlberg/archive/v1.0.3.tar.gz'
-  sha256 'a8be5cfe43d3b61cde882493232a7362d628e0934a9cb30a6a8d393896730e03'
-  license 'Elastic-2.0'
+  desc "High-performance web crawling engine CLI"
+  homepage "https://github.com/xberg-io/crawlberg"
+  url "https://github.com/xberg-io/crawlberg/archive/v1.0.3.tar.gz"
+  sha256 "a8be5cfe43d3b61cde882493232a7362d628e0934a9cb30a6a8d393896730e03"
+  license "Elastic-2.0"
 
   bottle do
     root_url "https://github.com/xberg-io/crawlberg/releases/download/v1.0.3"
@@ -16,15 +16,15 @@ class Crawlberg < Formula
     sha256 cellar: :any, x86_64_linux: "0f11ce9b386942068b07cad92627a393d2faee0449af374704d859d66afa33b1"
   end
 
-  head 'https://github.com/xberg-io/crawlberg.git', branch: 'main'
+  head "https://github.com/xberg-io/crawlberg.git", branch: "main"
 
-  depends_on 'cmake' => :build
-  depends_on 'pkg-config' => :build
-  depends_on 'rust' => :build
+  depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
+  depends_on "rust" => :build
 
   def install
-    ENV['OPENSSL_DIR'] = Formula['openssl'].opt_prefix
-    system 'cargo', 'install', '--features', 'api,mcp,mcp-http', *std_cargo_args(path: 'crates/crawlberg-cli')
+    ENV["OPENSSL_DIR"] = Formula["openssl"].opt_prefix
+    system("cargo", "install", "--features", "api,mcp,mcp-http", *std_cargo_args(path: "crates/crawlberg-cli"))
   end
 
   test do
