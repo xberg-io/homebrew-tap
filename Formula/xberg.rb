@@ -4,8 +4,8 @@
 class Xberg < Formula
   desc "High-performance document intelligence CLI"
   homepage "https://xberg.io"
-  url "https://github.com/xberg-io/xberg/releases/download/v1.0.0-rc.22/xberg-1.0.0-rc.22.tar.gz"
-  sha256 "cbf51afda190c2037b28c9bbc3ee0e7872825c3e69b072feaf30e6136196617b"
+  url "https://github.com/xberg-io/xberg/releases/download/v1.0.0-rc.23/xberg-1.0.0-rc.23.tar.gz"
+  sha256 "df870aaec610f60c64c14ba94943cd170dce60b3c6b3cf55a8d1c3533b4cf96f"
   license "MIT"
 
   bottle do
