@@ -9,11 +9,11 @@ class Crawlberg < Formula
   license "Elastic-2.0"
 
   bottle do
-    root_url "https://github.com/xberg-io/crawlberg/releases/download/v1.0.6"
-    sha256 cellar: :any, arm64_linux: "5da4eaff7e3aea9aef0b6baa09709a8a811eb23118116eec55c073a5587fc598"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "73178ef93e49dff8331a581ccee7c66d0e63f1a56f7b89636ddd8401ef7f1893"
-    sha256 cellar: :any_skip_relocation, sequoia: "f34af4537c215c99fab4ea446f9364bff4f7275b30b4d6e6f06e707489d6b39c"
-    sha256 cellar: :any, x86_64_linux: "a6e92ee289365465e6b21829f1a5d6342813129e79ed662cec9922678d6e5c45"
+    root_url "https://github.com/xberg-io/crawlberg/releases/download/v1.0.7"
+    sha256 cellar: :any, arm64_linux: "b2541c5196ae93176e1a6a5cef36831cb55d5eb1abac75eff918251221ac1a57"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "66f477d4f750fb4fabb3f969d26d95a9c1636a55422e1c60fe6aa603214b0303"
+    sha256 cellar: :any_skip_relocation, sequoia: "7878e1ebd3dcfead7a3abdd743d75062b60f27e2e37f8c23e7278165a5e6ca0a"
+    sha256 cellar: :any, x86_64_linux: "ac7ba23a0765a36cb8f21a9378614e0132f781245da0823889415ed66c6947b8"
   end
 
   head "https://github.com/xberg-io/crawlberg.git", branch: "main"
