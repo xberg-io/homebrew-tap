@@ -8,8 +8,9 @@ gitignore = true
 presets = ['claude', 'codex', 'copilot', 'cursor', 'antigravity']
 builtins = ['ruby', 'default-commands']
 
+compact = true
 [[includes]]
 name = 'xberg-core'
-source = 'https://github.com/xberg-io/ai-rulez.git'
+source = 'https://github.com/xberg-io/agent-conventions.git'
 path = 'modules/core'
 merge_strategy = 'local-override'
