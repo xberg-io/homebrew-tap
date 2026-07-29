@@ -54,7 +54,6 @@ class Xberg < Formula
       )
     else
       system("cargo", "install", "--features", "api,mcp,mcp-http", *std_cargo_args(path: "crates/xberg-cli"))
-      bin.install_symlink(bin / "xberg" => "xberg")
     end
   end
 
