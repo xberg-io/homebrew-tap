@@ -9,11 +9,9 @@ class Crawlberg < Formula
   license "Elastic-2.0"
 
   bottle do
-    root_url "https://github.com/xberg-io/crawlberg/releases/download/v1.0.10"
-    sha256 cellar: :any, arm64_linux: "294c0d982adb3ee5fa63fd693098c8ddab6726a76080ecd99a42f3458de424d9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "a16ae503b31e6700bfd7136e31ac7ce1ea4fe564455675c09d4fb2d9c950fed1"
-    sha256 cellar: :any_skip_relocation, sequoia: "8ff6cd92f01328ed3b43c139db097e500a456f33ace05b75f23d2a3bf3fd341c"
-    sha256 cellar: :any, x86_64_linux: "474e2961ffe8b6a3cda11c8f17386804c18a5010ba4df9483bc6c6a2b1d7f1fb"
+    root_url "https://github.com/xberg-io/crawlberg/releases/download/v1.0.12"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "a230589b4e14447d219a4956252b64aec9cf8e4a4470eb4e8643af4be5f6cad4"
+    sha256 cellar: :any_skip_relocation, sequoia: "fdf19d6a208c85088d4ad4e9f7dfde5ea2107301b03d7f18dbb727e75fa48217"
   end
 
   head "https://github.com/xberg-io/crawlberg.git", branch: "main"
