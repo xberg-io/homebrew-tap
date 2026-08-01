@@ -55,8 +55,12 @@ class Xberg < Formula
         ORT_DYLIB_PATH: "#{Formula["onnxruntime"].opt_lib}/libonnxruntime.dylib"
       )
     else
+      # `cargo install --root #{prefix}` (via std_cargo_args) already installs the
+      # real binary at #{prefix}/bin/xberg — nothing else to do. (A previous
+      # `bin.install_symlink(bin/"xberg" => "xberg")` here force-overwrote that
+      # binary with a self-referential dangling symlink, producing empty bottles;
+      # see xberg-io/xberg#1356.)
       system("cargo", "install", "--features", "api,mcp,mcp-http", *std_cargo_args(path: "crates/xberg-cli"))
-      bin.install_symlink(bin / "xberg" => "xberg")
     end
   end
 
