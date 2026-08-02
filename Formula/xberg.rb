@@ -9,11 +9,11 @@ class Xberg < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/xberg-io/xberg/releases/download/v1.0.9"
-    sha256 cellar: :any, arm64_linux: "14855b0a3ceb8ca692c4388d56da1ae8460cb1211d71fa9ee50f927d192ab8b0"
-    sha256 cellar: :any, arm64_tahoe: "94fbd09cd53bf0404862e319406c09bba2830af02efee375d845ef476e0b0927"
-    sha256 cellar: :any, sequoia: "0bd8af4511712c391a3dbd8d0b333ee4882ddb63029ce0436586f97662b11c24"
-    sha256 cellar: :any, x86_64_linux: "46d8ed5c2a22fcc48d8b7ce52ccb533b21aa521b080a2a6ef984a0b27bc7273d"
+    root_url "https://github.com/xberg-io/xberg/releases/download/v1.0.10"
+    sha256 cellar: :any, arm64_linux: "bf6b23be3e775b57b51191f7172c668be9fd9a1df5b888261c962a5a94257c2d"
+    sha256 cellar: :any, arm64_tahoe: "fa9f7182100d077283db7a18793b5e2d8cd436d1c8b28241db7990593aae47d0"
+    sha256 cellar: :any, sequoia: "198ee94e87e32eb899993d1e1453c425cc7cb94dd414b754711cea41955bd6c2"
+    sha256 cellar: :any, x86_64_linux: "fe7a99d81c6006dc751d601f33aa6b865ec23b0c8db588d7aaf4ca21556ebd98"
   end
 
   head "https://github.com/xberg-io/xberg.git", branch: "main"
