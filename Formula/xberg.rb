@@ -46,7 +46,7 @@ class Xberg < Formula
         "cargo",
         "install",
         "--features",
-        "api,mcp,mcp-http,ort-dynamic",
+        "api,mcp,mcp-http,ort-dynamic,heic",
         *std_cargo_args(path: "crates/xberg-cli")
       )
       libexec.install(bin / "xberg")
@@ -60,7 +60,9 @@ class Xberg < Formula
       # `bin.install_symlink(bin/"xberg" => "xberg")` here force-overwrote that
       # binary with a self-referential dangling symlink, producing empty bottles;
       # see xberg-io/xberg#1356.)
-      system("cargo", "install", "--features", "api,mcp,mcp-http", *std_cargo_args(path: "crates/xberg-cli"))
+      # `heic` re-adds HEIC/HEIF (dropped from the CLI default for #1361 so
+      # `cargo install` works on stock Windows); Homebrew has libheif as a dep.
+      system("cargo", "install", "--features", "api,mcp,mcp-http,heic", *std_cargo_args(path: "crates/xberg-cli"))
     end
   end
 
