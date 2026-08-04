@@ -7,6 +7,13 @@ class LibhtmlToMarkdown < Formula
   version "3.10.4"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/xberg-io/html-to-markdown/releases/download/v3.10.4"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "aff4f0b603c66493cc9c3a350aad92e1087db8349a113d912c078f9b530239c3"
+    sha256 cellar: :any, arm64_tahoe: "16314e99cc8691497ba5abad3da883688bfe5139ade21b4c266b220d0b161bf9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8eb8e6a7baf9561a751a34fc750021852595851c8c3b98b1e9112557dccf33a9"
+  end
+
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
