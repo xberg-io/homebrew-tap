@@ -7,6 +7,14 @@ class LibtsPack < Formula
   version "1.15.6"
   license any_of: ["MIT", "Apache-2.0"]
 
+  bottle do
+    root_url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v1.15.6"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "8b77367ba960fa7881abd2bd820df5f681fddf9497f9631fc6958d1e5cc026d1"
+    sha256 cellar: :any, arm64_tahoe: "0944e9746abc19087adbb3799ee2d63226067438089f1f7c3b23f3c56021c89d"
+    sha256 cellar: :any, sequoia: "43b08b47d4d94e787cbe43748c5dff863ba3c6361693de491a1d048828ed115f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "94358aadb3cde46bdd5277ea58fb97f01292af1b71dfbe3276a86a05035bbd7c"
+  end
+
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
