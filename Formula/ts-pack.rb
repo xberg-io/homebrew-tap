@@ -4,38 +4,30 @@
 class TsPack < Formula
   desc "Tree-sitter language pack CLI - download and manage 371 parser grammars"
   homepage "https://github.com/xberg-io/tree-sitter-language-pack"
-  version "1.15.6"
+  version "1.15.7"
   license any_of: ["MIT", "Apache-2.0"]
-
-  bottle do
-    root_url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v1.15.6"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "0c3b40b095cb39286ab073c68815d80aa40a8aaefdf3c762d9bee7118e2e67a5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "7ee2b2431e72ac1e5be5c0317a87cf65fa19af98744e77cba5299341e5eb3c35"
-    sha256 cellar: :any_skip_relocation, sequoia: "9909adc3ddf7f5a364c058d44f2093c4509402d2ed092532ecfbfc7e445556df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ba8ab206ccbd8ba56c5bb2fb4f99584b1559d2b6f1e47a4ee97f970c5451cb19"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-aarch64-apple-darwin.tar.gz"
-      sha256 "68c039b3b9ce872c474991cf97886f6db77ddff7ad6c6467e0c2fd2b8cc23f4a"
+      sha256 "0c8aea1dc8779b1e91d51fceb6961b4488ddc08b26bdcf5996b22efe9968817c"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-x86_64-apple-darwin.tar.gz"
-      sha256 "c5115ab3827356846a1c0c08dac82e0d387a5356e426c36f3ec906475dfc1866"
+      sha256 "6319828731bb995dcc8136dddb52640aff5a2efdf2a140ca7920870af2e38dfe"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "3135555e513bd814fbb46e704a676a5bf0eec683a84d0795ee72527878c0b57c"
+      sha256 "b0da3f3f1e2d3dcc545b80ca75cd1496a1f3c19c033807f6f06f1513daea920c"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bfb5a4c2e0e7bb442f6cc887b630f27d789d5b8113927ac7d50a770f5208d194"
+      sha256 "261bda6fdf82d7af4a7118bb432c79b9514f4a8cb08a1adc3cceeca1dc78d05b"
     end
   end
 
