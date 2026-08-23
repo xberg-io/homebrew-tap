@@ -9,8 +9,8 @@ class HtmlToMarkdown < Formula
 
   bottle do
     root_url "https://github.com/xberg-io/html-to-markdown/releases/download/v3.11.4"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "786980415e2e7643d1af631fcdf3d858b5c83f45488d60f561df23a097ded258"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "6999635b8c6733f3e4b5644e7f66f8c77a0f5f38f574b9d888f4ffe1c3588dd2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "6999635b8c6733f3e4b5644e7f66f8c77a0f5f38f574b9d888f4ffe1c3588dd2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "786980415e2e7643d1af631fcdf3d858b5c83f45488d60f561df23a097ded258"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "5a16fa01b601011b2c35cf28d133e7654c53acc4e02cf4f750a7d9c8a61534f6"
   end
 

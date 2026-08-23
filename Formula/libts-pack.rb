@@ -9,9 +9,9 @@ class LibtsPack < Formula
 
   bottle do
     root_url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v1.15.7"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "84eb2da3b024c597cbcbd587a250ffac57f5ec6f90474e615249eb8a10262073"
-    sha256 cellar: :any, arm64_tahoe: "6db8aaaa45edb68516eb07436930fd4a1bc341df742fc1aba9f2003c6846a8ac"
-    sha256 cellar: :any, sequoia: "a27893dc3c59f7fef5c4ce0735b7b8f43912308e866ff516301beb8bcecafc2e"
+    sha256 cellar: :any,                 arm64_tahoe:  "6db8aaaa45edb68516eb07436930fd4a1bc341df742fc1aba9f2003c6846a8ac"
+    sha256 cellar: :any,                 sequoia:      "a27893dc3c59f7fef5c4ce0735b7b8f43912308e866ff516301beb8bcecafc2e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "84eb2da3b024c597cbcbd587a250ffac57f5ec6f90474e615249eb8a10262073"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "1173c5d70262c67daa628fece747d0b1fcb90916dc1aa06d0cb04d3e33d3aad5"
   end
 

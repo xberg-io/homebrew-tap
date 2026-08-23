@@ -8,15 +8,15 @@ class Xberg < Formula
   sha256 "cb64b3f529363be5da35dc88b1982249a2657dcfd6321d475c8f024edfa35f35"
   license "MIT"
 
+  head "https://github.com/xberg-io/xberg.git", branch: "main"
+
   bottle do
     root_url "https://github.com/xberg-io/xberg/releases/download/v1.0.14"
-    sha256 cellar: :any, arm64_linux: "316db5d04c628397c6a27fa344e4576a93223e28d66b8d2314cade6df68187c4"
-    sha256 cellar: :any, arm64_tahoe: "e9cba02e4e711e20e2d547533cb6bac3ad9438053613962caf0008d7f1b4c6d1"
-    sha256 cellar: :any, sequoia: "dbe71e7079351f8efe8f70dd020bb0406f06b87820a4177ea2be29a4e983184f"
+    sha256 cellar: :any, arm64_tahoe:  "e9cba02e4e711e20e2d547533cb6bac3ad9438053613962caf0008d7f1b4c6d1"
+    sha256 cellar: :any, sequoia:      "dbe71e7079351f8efe8f70dd020bb0406f06b87820a4177ea2be29a4e983184f"
+    sha256 cellar: :any, arm64_linux:  "316db5d04c628397c6a27fa344e4576a93223e28d66b8d2314cade6df68187c4"
     sha256 cellar: :any, x86_64_linux: "0a3390df26674dcd236dd9fc51e71f5b135aff3ee8d75878ebec8d74daf330c5"
   end
-
-  head "https://github.com/xberg-io/xberg.git", branch: "main"
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
@@ -36,7 +36,7 @@ class Xberg < Formula
   end
 
   def install
-    ENV["OPENSSL_DIR"] = Formula["openssl"].opt_prefix
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl")
 
     if OS.mac? && Hardware::CPU.intel?
       # Build with load-dynamic (no static x86_64-mac prebuilt exists) and point
@@ -47,12 +47,12 @@ class Xberg < Formula
         "install",
         "--features",
         "api,mcp,mcp-http,ort-dynamic,heic",
-        *std_cargo_args(path: "crates/xberg-cli")
+        *std_cargo_args(path: "crates/xberg-cli"),
       )
       libexec.install(bin / "xberg")
       (bin / "xberg").write_env_script(
         libexec / "xberg",
-        ORT_DYLIB_PATH: "#{Formula["onnxruntime"].opt_lib}/libonnxruntime.dylib"
+        ORT_DYLIB_PATH: "#{formula_opt_lib("onnxruntime")}/libonnxruntime.dylib",
       )
     else
       # `cargo install --root #{prefix}` (via std_cargo_args) already installs the
