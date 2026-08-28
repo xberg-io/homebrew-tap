@@ -9,11 +9,11 @@ class Alef < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/xberg-io/alef/releases/download/v0.72.0"
-    sha256 cellar: :any, arm64_linux: "2edf91f3f0b253cdb09d12e2c9bebc6ed4487e8a1e680156c619eba34405f752"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "c3d3a0f7894bdde2eb8b9a52c9040a6780a19a29477f028e1ebf46870153a014"
-    sha256 cellar: :any_skip_relocation, sequoia: "0b69e5e0964816e966e0255522aa79ccfbfee1d786c9af7f5ea11a65f585a1b2"
-    sha256 cellar: :any, x86_64_linux: "4fecc452a555bf26d9c2f4f393ba1051d1324ea03c753e65ecd244bab0a1f9fa"
+    root_url "https://github.com/xberg-io/alef/releases/download/v0.73.0"
+    sha256 cellar: :any, arm64_linux: "0df8a11e0526815179a1c28dfc073d26d714aa2310efadeef4d33f0b6872d9dc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "298d32a5972f3dcc1b57ec0bf38daddb1a6a0edd070c16aff60e119b204b638e"
+    sha256 cellar: :any_skip_relocation, sequoia: "5e4ad1f684e2e32b47ddc168879739f6c3a23df877a0d1305dddd02a369faa8b"
+    sha256 cellar: :any, x86_64_linux: "644ed33dbe5463dc3fa29da83d8a8973d884881494c10aea872f9b5799662e36"
   end
 
   head "https://github.com/xberg-io/alef.git", branch: "main"
