@@ -4,8 +4,8 @@
 class LiterLlm < Formula
   desc "Universal LLM API client with native bindings for 14 languages"
   homepage "https://xberg.io"
-  url "https://github.com/xberg-io/liter-llm/archive/v1.18.4.tar.gz"
-  sha256 "790e561a368e58a27e46c339f96e28e9e5dd6a6e7a05a167cc8c3e4a05ee7075"
+  url "https://github.com/xberg-io/liter-llm/archive/v1.19.1.tar.gz"
+  sha256 "f4b76bc9e45b22af09ecdead01cc030eda65a7cac407b86569194a3c0d580ff5"
   license "MIT"
 
   bottle do
@@ -19,6 +19,8 @@ class LiterLlm < Formula
   head "https://github.com/xberg-io/liter-llm.git", branch: "main"
 
   depends_on "rust" => :build
+  depends_on 'protobuf' => :build
+  depends_on 'openssl@3' => :build
 
   def install
     system("cargo", "install", *std_cargo_args(path: "crates/liter-llm-cli"))
