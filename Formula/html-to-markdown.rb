@@ -7,6 +7,13 @@ class HtmlToMarkdown < Formula
   version "3.12.2"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/xberg-io/html-to-markdown/releases/download/v3.12.2"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "6c387e9c8f81c6d3fa9541cccec015fc12b0d71b8906db39197b885e6188961c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "e835813313bbc43e2d484c484d7e18860f2c8fb6cbf5a5e2cce7b9f6b51f7104"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b2c53ef6ec4efbf88a7ff3be1f04fdc05f87eba81bf740c988f40a2fd0d593a1"
+  end
+
   # macOS is Apple Silicon only — the CLI no longer ships an x86_64-apple-darwin
   # build (Intel mac dropped), so there is no on_intel block here.
   on_macos do
