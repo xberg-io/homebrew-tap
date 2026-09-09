@@ -4,8 +4,8 @@
 class LiterLlm < Formula
   desc "Universal LLM API client with native bindings for 14 languages"
   homepage "https://xberg.io"
-  url "https://github.com/xberg-io/liter-llm/archive/v1.19.2.tar.gz"
-  sha256 "f5873b8927adb935578aa821a3bd9a04f620673fab84fd97f26a80e37f30b12d"
+  url "https://github.com/xberg-io/liter-llm/archive/v2.0.0.tar.gz"
+  sha256 "8d6e9b180c1ad62bb5099973f3190eb145775d58e369dff82e2dfa44fb2a7663"
   license "MIT"
 
   bottle do
