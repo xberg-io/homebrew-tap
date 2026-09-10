@@ -9,10 +9,10 @@ class LiterLlm < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/xberg-io/liter-llm/releases/download/v1.19.2"
-    sha256 cellar: :any, arm64_linux: "5dacf748a9dd6973608dce06f3472090aa1940cc0e3a566902f27a74c5392a0e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "bccddf88d1a528d5c887ad69dbff3b3ca7c0312bd4b61894a4efe83bf0ab2516"
-    sha256 cellar: :any, x86_64_linux: "d4fabbc137af103d96edb410e2c19f5022e980fab3cdc58bd8569c61bab19304"
+    root_url "https://github.com/xberg-io/liter-llm/releases/download/v2.0.0"
+    sha256 cellar: :any, arm64_linux: "c888555ac7e8aca401952c1579d7b553020d03bac7b14d287b255e292fc59c4f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "d0e5385bf74791b2a7eae0e86b6606145064c0c2298dcd4b7b311e7074e20e64"
+    sha256 cellar: :any, x86_64_linux: "05e28562503da7f91eadcef2c71043962573c0153b9cab79d4b14b307756058a"
   end
 
   head "https://github.com/xberg-io/liter-llm.git", branch: "main"
