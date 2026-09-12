@@ -4,37 +4,30 @@
 class LibtsPack < Formula
   desc "C library for tree-sitter language pack (FFI bindings)"
   homepage "https://github.com/xberg-io/tree-sitter-language-pack"
-  version "1.18.0"
+  version "1.19.0"
   license any_of: ["MIT", "Apache-2.0"]
-
-  bottle do
-    root_url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v1.18.0"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "e8c4f51ccbbec1b5dc811d8672640c7c46f0f012bbd4428268d95a14bab075cc"
-    sha256 cellar: :any, arm64_tahoe: "29f031fdde5aecf5597267675f28d9b11b8ea7f9d4f3014dd25166c5df8ce421"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "2d925c31998bd5af613b42723d7274e70433af0dbf853b591f709b25203a7e9e"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "d8b24c30e1f580e190796898661528dc79389d1bbc38188ba41e17f20c1693b7"
+      sha256 "3593d4e50d1f5578da8d3872d9e62e9b3eace66aeee3d18f75c247763395e941"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "b777540ea22c9ce650674cb7537807849820a62f22deb854a9824f2a04369782"
+      sha256 "f185f9f3536662472f5c00b9b73cc0c6681098257cf4f359508042388d04dd43"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "22da931a4dffdbe78826e8c7055a3d7cb35a30acff5d6c570bf06dd76fa53278"
+      sha256 "f04298b956e0d161f3b76da25f555646274bf1db1b6550653626e15e452b0d6f"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "d3fb856aea01e8d4ef28cf9410684bcc1d45ee1b55c2603cdd82ac2d2d418f7b"
+      sha256 "7bf66e65effd12f8e724e33fe34e9025a514c51134eeee6af30b0d5f2ecc62a8"
     end
   end
 
