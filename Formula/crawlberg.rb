@@ -4,16 +4,9 @@
 class Crawlberg < Formula
   desc "High-performance web crawling engine CLI"
   homepage "https://github.com/xberg-io/crawlberg"
-  url 'https://github.com/xberg-io/crawlberg/archive/v1.6.2.tar.gz'
-  sha256 '1547bfcb2ff9e1338f528cdd5f874f4e84bbcfb59f4bc1fc7e8c64da8755969f'
+  url 'https://github.com/xberg-io/crawlberg/archive/v1.6.3.tar.gz'
+  sha256 '24020aac9067d63d4dfec6264d84676daafccf3ab6859eb7addfbfc258b6ecb9'
   license "Elastic-2.0"
-
-  bottle do
-    root_url "https://github.com/xberg-io/crawlberg/releases/download/v1.6.2"
-    sha256 cellar: :any, arm64_linux: "def8f067f30f6f1c155ea26754cc4e0fd3857db397d4027b8c0ff0d7d59e4f74"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "ca6f7685d07692f3079b2ea1c606a3c4696dfd33302418030c1495691b743e60"
-    sha256 cellar: :any, x86_64_linux: "98a2ded3ed19abbcfec716b64cf7cb383f1478b96cb558bd5cd360b024e1274a"
-  end
 
   head "https://github.com/xberg-io/crawlberg.git", branch: "main"
 
