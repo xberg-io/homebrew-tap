@@ -5,6 +5,17 @@ Homebrew tap for Xberg packages.
 ## Installation
 
 ```bash
+brew install xberg-io/tap/xberg
+```
+
+Homebrew 7.0 will not load a formula from a third-party tap it has not been told to trust.
+Naming the formula in full, as above, is enough — Homebrew treats that as explicit consent for
+that one install. If you would rather tap first and then install by bare name, trust the tap
+before tapping it, because `brew tap` itself runs a verify pass that fails on an untrusted tap
+and reports it as the unrelated-sounding `Cannot tap xberg-io/tap: invalid syntax in tap!`:
+
+```bash
+brew trust --tap xberg-io/tap
 brew tap xberg-io/tap
 brew install xberg
 ```
