@@ -13,13 +13,17 @@ class HtmlToMarkdown < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "a4f35766e21335392f011deae2d121dded32df3be71e253e8838bf472003ac8f"
   end
 
-  # macOS is Apple Silicon only — the CLI no longer ships an x86_64-apple-darwin
-  # build (Intel mac dropped), so there is no on_intel block here.
+  # macOS is Apple Silicon only -- the CLI no longer ships an x86_64-apple-darwin build.
+  # The url sits at on_macos scope rather than inside an on_arm block: Homebrew validates a
+  # formula under EVERY os/arch pair, and an Intel-macOS simulation that finds no url at all
+  # fails with "formula requires at least a URL", which `brew tap` then reports as
+  # "Cannot tap xberg-io/tap: invalid syntax in tap!" -- blocking every consumer of the tap,
+  # not just Intel mac users. `depends_on arch: :arm64` is what actually refuses the install,
+  # with an accurate message. Verified with `brew readall --os=all --arch=all`.
   on_macos do
-    on_arm do
-      url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/cli-aarch64-apple-darwin.tar.gz"
-      sha256 "3094f76d99cb56d87a2a12a2546c1b8a438eb507e9374a9ec97f0d61a2557c16"
-    end
+    url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/cli-aarch64-apple-darwin.tar.gz"
+    sha256 "3094f76d99cb56d87a2a12a2546c1b8a438eb507e9374a9ec97f0d61a2557c16"
+    depends_on arch: :arm64
   end
 
   on_linux do
