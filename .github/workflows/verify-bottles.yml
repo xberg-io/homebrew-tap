@@ -1,0 +1,33 @@
+name: Verify bottles
+
+# Formula bottle blocks are written by other repos' release automation, not by PRs to this
+# tap, so drift lands here with no commit to review. It arrived exactly that way once: a
+# failed macOS bottle build skipped the "merge bottle DSL" step, the previous version's block
+# survived intact, and every platform's bottle 404'd behind a root_url two releases stale.
+# Hence the schedule as well as the PR trigger. ~keep
+on:
+  pull_request:
+    paths:
+      - "Formula/**"
+      - "scripts/verify-bottle-urls.sh"
+      - ".github/workflows/verify-bottles.yml"
+  push:
+    branches: [main]
+    paths:
+      - "Formula/**"
+      - "scripts/verify-bottle-urls.sh"
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Every declared bottle resolves
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Verify bottle URLs
+        run: ./scripts/verify-bottle-urls.sh
