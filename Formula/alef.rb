@@ -10,8 +10,9 @@ class Alef < Formula
 
   bottle do
     root_url "https://github.com/xberg-io/alef/releases/download/v0.89.0"
-    sha256 cellar: :any, arm64_linux: "76d4bcbd4117780c01e795d7ffc0fa5605c915a86a05c0251a08181f6cfa8c98"
-    sha256 cellar: :any, x86_64_linux: "be74a17d333a840c12e72c1af03039b14a8c31fd08c8dbf0a342a9b2abe129b5"
+    sha256 cellar: :any, arm64_linux: "69b0af02ea22ed853a13f18689d4ddfef77f24ed4ff633cf694fcedc4bca92d3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "9c38677c9a105b503a5e0f0e5b69cb3fc79fefb685b950d030068e1bdbddf437"
+    sha256 cellar: :any, x86_64_linux: "992758e1de3a9303f7b2a34217209b08d303a20bf30704a3f7aa057aea735381"
   end
 
   head "https://github.com/xberg-io/alef.git", branch: "main"
