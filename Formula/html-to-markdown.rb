@@ -4,37 +4,32 @@
 class HtmlToMarkdown < Formula
   desc "High-performance HTML to Markdown converter powered by Rust"
   homepage "https://github.com/xberg-io/html-to-markdown"
-  version "3.13.0"
+  version "3.14.0"
   license "MIT"
 
-  bottle do
-    root_url "https://github.com/xberg-io/html-to-markdown/releases/download/v3.13.0"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "36d87a66bd091b68cccb7b2cba9aa5fb508a4b32440554c057fe3869dfa3b243"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "a4f35766e21335392f011deae2d121dded32df3be71e253e8838bf472003ac8f"
-  end
-
   # macOS is Apple Silicon only -- the CLI no longer ships an x86_64-apple-darwin build.
-  # The url sits at on_macos scope rather than inside an on_arm block: Homebrew validates a
-  # formula under EVERY os/arch pair, and an Intel-macOS simulation that finds no url at all
-  # fails with "formula requires at least a URL", which `brew tap` then reports as
-  # "Cannot tap xberg-io/tap: invalid syntax in tap!" -- blocking every consumer of the tap,
-  # not just Intel mac users. `depends_on arch: :arm64` is what actually refuses the install,
-  # with an accurate message. Verified with `brew readall --os=all --arch=all`.
+  # The url MUST stay at on_macos scope rather than inside an on_arm block. Homebrew
+  # validates a formula under EVERY os/arch pair, so an Intel-macOS simulation that finds no
+  # url at all fails with "formula requires at least a URL", which `brew tap` then reports as
+  # "Cannot tap xberg-io/tap: invalid syntax in tap!". One unreachable platform on this one
+  # formula made the entire tap untappable for everyone and blocked every bottle build in the
+  # org (alef 0.89.0). `depends_on arch: :arm64` is what refuses an Intel install, with an
+  # accurate message. Check with `brew readall --os=all --arch=all xberg-io/tap`.
   on_macos do
     url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/cli-aarch64-apple-darwin.tar.gz"
-    sha256 "3094f76d99cb56d87a2a12a2546c1b8a438eb507e9374a9ec97f0d61a2557c16"
+    sha256 "ac9dba9a6cfbd52cf1397b9c6462ef2c58f3421323ca32ad5c21fb44ece26f91"
     depends_on arch: :arm64
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/cli-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "cfa7fffce108b64892c5d8f79cf5151c51bf4d498b92143073d17940e54c2ee8"
+      sha256 "39dd6440176f92476aab4bf67a383cfc30027dcf5b2e54673929c55dc64c5346"
     end
 
     on_intel do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "89dbcb4b61a1d9c53de9760fb56b59f20cb0770eb37830e20ce1ee91b92e35d0"
+      sha256 "b8d8f3063a1243321e789e4bf5acfdd99889b7e86e5c28d5bfb5f3ab29ab640e"
     end
   end
 

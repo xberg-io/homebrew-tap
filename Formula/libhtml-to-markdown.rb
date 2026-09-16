@@ -4,36 +4,30 @@
 class LibhtmlToMarkdown < Formula
   desc "C library for HTML to Markdown conversion (FFI bindings)"
   homepage "https://github.com/xberg-io/html-to-markdown"
-  version "3.13.0"
+  version "3.14.0"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/xberg-io/html-to-markdown/releases/download/v3.13.0"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "42ee2643249c5b49cc7dc06609941bc6eaf71c09a9f90d0d809d6e10ef3a0cc6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c61ee827e8145c140ce54d513113495d57d1923e72ef89c182c6d8ad071acbce"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "69716252d69663820c525bd5a384ca3e788c5afe312d31565f39e93438c8878a"
+      sha256 "00ddbadb23f5823b917a406352cd31eddd1e3bef8d01ab9502651f8ca32b0adf"
     end
 
     on_intel do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "971db957d45c361e10a9280f3bee5ed11cbc40395834814d70e5ef0bce18dac5"
+      sha256 "a69b6616877ed989a0aef207701ee4323b1c0ba6328109a5be2e6c9fc37c7a39"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "70bf93c0344d797a9c8d3626dcd2f99f588eca02524584e43be4184fd12b2124"
+      sha256 "41e321a3f14ec8d10f97aa4c5aea5444b68b4cfd267906160557f2cbb8e68cce"
     end
 
     on_intel do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1f928d001802291cb8020e850b9499598046120d334537d1de8bb7ea4dd2a1a4"
+      sha256 "59aedf677b707ea5ec6fde38046e35890975e595f48afb6fa2cf808c5ff94d5a"
     end
   end
 
