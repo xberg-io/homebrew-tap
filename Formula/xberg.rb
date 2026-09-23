@@ -8,6 +8,13 @@ class Xberg < Formula
   sha256 "22c4d2ca3d9d7a32ec196cc4607f5e506011df95807bb5ed7fc06d8d64f0000a"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/xberg-io/xberg/releases/download/v1.2.8"
+    sha256 cellar: :any, arm64_linux: "d730c12de240f8374f81cb94e9bd6546dff738b03477d4796b265c89ade44929"
+    sha256 cellar: :any, arm64_tahoe: "797089c1655e00f089e5c889a2d87ef5c36b141fc7e11f705314deac5e66a487"
+    sha256 cellar: :any, x86_64_linux: "eba9e65dd8b7ff3a162e578ae522fc636260bb0725a3498b9d1ad64d96a6fe56"
+  end
+
   head "https://github.com/xberg-io/xberg.git", branch: "main"
 
   depends_on "cmake" => :build
