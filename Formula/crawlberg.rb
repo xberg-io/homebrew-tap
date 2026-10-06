@@ -8,6 +8,13 @@ class Crawlberg < Formula
   sha256 '8930d92c8019ef45d230f04940b0c3dbfffd7c5ad9984a2e388edb9efcad6d91'
   license "Elastic-2.0"
 
+  bottle do
+    root_url "https://github.com/xberg-io/crawlberg/releases/download/v1.10.2"
+    sha256 cellar: :any, arm64_linux: "47f07f272164ccbb50ecc4f62d420cd2798365d8140431e3d2ac826122c89528"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "f82fcbce101d74c04dd38fa7fcdb3290f20537c76bf952d0d94b2ee8ecd03b26"
+    sha256 cellar: :any, x86_64_linux: "0d05af79785dc35452b689163d1371fa4ce6f473f4114d9ff0093b5f1a7ab8da"
+  end
+
   head "https://github.com/xberg-io/crawlberg.git", branch: "main"
 
   depends_on "cmake" => :build
