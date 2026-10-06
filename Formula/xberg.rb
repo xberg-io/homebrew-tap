@@ -10,9 +10,9 @@ class Xberg < Formula
 
   bottle do
     root_url "https://github.com/xberg-io/xberg/releases/download/v1.3.5"
-    sha256 cellar: :any, arm64_linux: "25c3a207f9304d498ba99a94b15e2c18d9edc547cbc176fceb2a8bc46ba80b96"
-    sha256 cellar: :any, arm64_tahoe: "f3a847fa32f5ae3b6c94d010b1d98b6e1949a338190677d3ca54f51dec220f13"
-    sha256 cellar: :any, x86_64_linux: "f4c8d83247666759018a185a5671ca241fcc48c8184be5479b628843d6f75a77"
+    sha256 cellar: :any, arm64_linux: "4cd3ba5a22c0550b1fa3d813f576e540bd1df5a98af1f30d19559bf6d306373e"
+    sha256 cellar: :any, arm64_tahoe: "bdc9f66ca05930a660715a6d4d88d0e81da58ee20ba6a7a2f826a04448f72ed3"
+    sha256 cellar: :any, x86_64_linux: "13c10602e08eaf11686e8aea6d9f5493580c8d2610b75efdd4daeeecc2b24a8f"
   end
 
   head "https://github.com/xberg-io/xberg.git", branch: "main"
