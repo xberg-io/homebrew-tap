@@ -1,6 +1,12 @@
 ---
-name: formula-maintenance
+type: Playbook
+title: Formula Maintenance
 description: Homebrew tap formula maintenance for xberg-io CLIs — source-build vs binary-only formula types, the version-bump checklist (url/version/sha256/bottles/root_url), and building bottles with scripts/build-bottles.sh. Load when editing a .rb formula, cutting a release bump, or updating bottle hashes.
+x-ai-rulez:
+  kind: skill
+  id: formula-maintenance
+  metadata:
+    name: formula-maintenance
 ---
 
 # Formula Maintenance
