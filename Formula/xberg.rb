@@ -4,16 +4,9 @@
 class Xberg < Formula
   desc "High-performance document intelligence CLI"
   homepage "https://xberg.io"
-  url "https://github.com/xberg-io/xberg/releases/download/v1.3.7/xberg-1.3.7.tar.gz"
-  sha256 "388e2e293cc0d3e1bbed4738d010375e30c689fbdbe2978c10e1a11f3d1fe3cf"
+  url "https://github.com/xberg-io/xberg/releases/download/v1.3.8/xberg-1.3.8.tar.gz"
+  sha256 "6774032bcff405c3993054d5d3b49e115793d46c6ade3d73fd93dadbe3bcb013"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/xberg-io/xberg/releases/download/v1.3.7"
-    sha256 cellar: :any, arm64_linux: "ea4247698a3e2c979d6b774726844a1bc733960ebc73949ff3586f553c3ac678"
-    sha256 cellar: :any, arm64_tahoe: "17f188c6ce700e84616f588765291d892a0562f4fe845829089c1937e6d65453"
-    sha256 cellar: :any, x86_64_linux: "e1177eb7e3af71494af1a8bb29a3b0e0bf52d0442791f09501db2ae3fe446b5c"
-  end
 
   head "https://github.com/xberg-io/xberg.git", branch: "main"
 
