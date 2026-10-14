@@ -24,31 +24,37 @@ stages = ["pre-commit"]
 # generic rubocop. Exclude them so the hooks don't rewrite them into non-idiomatic
 # Ruby that `brew audit` would then reject.
 lint = { exclude = [
-    "**/*.lock",
-    "**/Cargo.lock",
-    "**/go.sum",
-    "**/package-lock.json",
-    "**/pnpm-lock.yaml",
-    "**/uv.lock",
-    "Formula/**",
+  "**/*.lock",
+  "**/Cargo.lock",
+  "**/go.sum",
+  "**/package-lock.json",
+  "**/pnpm-lock.yaml",
+  "**/uv.lock",
+  "Formula/**",
+  "/.ai-rulez/.generated-manifest.json",
+  "/.mcp.json",
 ] }
 fmt = { exclude = [
-    "**/*.lock",
-    "**/Cargo.lock",
-    "**/go.sum",
-    "**/package-lock.json",
-    "**/pnpm-lock.yaml",
-    "**/uv.lock",
-    "Formula/**",
+  "**/*.lock",
+  "**/Cargo.lock",
+  "**/go.sum",
+  "**/package-lock.json",
+  "**/pnpm-lock.yaml",
+  "**/uv.lock",
+  "Formula/**",
+  "/.ai-rulez/.generated-manifest.json",
+  "/.mcp.json",
 ] }
 commit = { stages = ["commit-msg"] }
 file_safety = { exclude = [
-    "**/*.lock",
-    "**/Cargo.lock",
-    "**/go.sum",
-    "**/package-lock.json",
-    "**/pnpm-lock.yaml",
-    "**/uv.lock",
+  "**/*.lock",
+  "**/Cargo.lock",
+  "**/go.sum",
+  "**/package-lock.json",
+  "**/pnpm-lock.yaml",
+  "**/uv.lock",
+  "/.ai-rulez/.generated-manifest.json",
+  "/.mcp.json",
 ] }
 
 # --- catalog tools (standalone binaries, PATH-probed) ---
@@ -66,9 +72,8 @@ enabled = true
 [[hooks.sources]]
 id = "ai-rulez"
 git = "https://github.com/Goldziher/ai-rulez.git"
-revision = "v4.9.3"
+revision = "ee42eef34f2922e4e75b75f25b1215b9492bb1aa"
 hooks = ["ai-rulez-validate"]
-
 [per-file-ignores]
 # Stylistic rules disabled repo-wide. Each is a formatting or idiom preference with no
 # correctness or security consequence, and each fires in volumes no one can hand-maintain
@@ -111,3 +116,6 @@ hooks = ["ai-rulez-validate"]
   "unicorn/prefer-type-error",
   "unicorn/require-module-specifiers",
 ]
+
+[discovery]
+exclude = ["/.ai-rulez/.generated-manifest.json", "/.mcp.json"]
