@@ -4,37 +4,37 @@
 class TsPack < Formula
   desc "Tree-sitter language pack CLI - download and manage 372 parser grammars"
   homepage "https://github.com/xberg-io/tree-sitter-language-pack"
-  version "1.21.0"
+  version "1.22.1"
   license any_of: ["MIT", "Apache-2.0"]
 
   bottle do
-    root_url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v1.21.0"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "83db4df8a8963d052bc047a216c7bc366b165d13d2862363268b4dc95529f4fb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "ce846dbad440fe1acd1458ed38cb0404756d09d4896bde935a37a897ffb9653a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "381de6a38d7f88cfb9703bc868f8ab269d584c9a110f8c664dfb367734f58e56"
+    root_url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v1.22.1"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "2fcc2c0e8b665ea5e9edad331bd496e7b4af05634f954346e6350896fb59561d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "3aec1d45d2af9cae34b8f6fd58bd3ef5aaeee69cef9556c0f9449604b8a5a5e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7ea1e558948eebd4b647ae5fc0c404f721b5c9da386869c7a887249f61cec80a"
   end
 
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-aarch64-apple-darwin.tar.gz"
-      sha256 "b22d6aa4640f9fe0e9efa472c47aab8c88609e8836f94080ee565d76c8a101b3"
+      sha256 "b204c335f06924faa22048a3b1d24ed2bbb8b4a55ebb78bbbfe39b2b781de211"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-x86_64-apple-darwin.tar.gz"
-      sha256 "9c43ea553fdaf5a45ef3292e39ecfc58daf5500fdf33d043497dba3a4cf102ec"
+      sha256 "f14c4fc91b15c172621162d021888767651f39d4ebee0c890c6cb2b133be405e"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0d46a8661851dc8851e638d1a8da5495160df1b9a8a7624381672a4e7e0efd3b"
+      sha256 "d954a1a9989009a1cd4a5f345309faff7802fc164af66f45eb92fe619a0b4bf3"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b46f9a3dd5d28a4ef1538a16342da56a3c530d7f030881a71f1de07b4ebd5277"
+      sha256 "3c7a16f9546b6ebe8b109571d8bd9e61455ceaebca538181d085bcc42e149642"
     end
   end
 

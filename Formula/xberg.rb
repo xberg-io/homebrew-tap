@@ -4,15 +4,15 @@
 class Xberg < Formula
   desc "High-performance document intelligence CLI"
   homepage "https://xberg.io"
-  url "https://github.com/xberg-io/xberg/releases/download/v1.3.6/xberg-1.3.6.tar.gz"
-  sha256 "11707b0119af8d795c05c5b99d9efc8dd180f2b10a9d6d6f12de6d248d01cd7d"
+  url "https://github.com/xberg-io/xberg/releases/download/v1.3.10/xberg-1.3.10.tar.gz"
+  sha256 "d38be1f2984ef2861597c1398cf0d98ec661f506cd1fb21d801071e8a67b0b30"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/xberg-io/xberg/releases/download/v1.3.6"
-    sha256 cellar: :any, arm64_linux: "f4f2632385a435a74372de7aa1d2b20eba0a486956144d2e18f6605cfaa0bcf8"
-    sha256 cellar: :any, arm64_tahoe: "fa70ff5cf6cbc7c1982a1d11aae3c1ced6af505373f1daed03cc87ef12cb7cfe"
-    sha256 cellar: :any, x86_64_linux: "e0c25f9802e0697455ccb19d8fd3ce0a82d3076e83f95d18ad5e5f5c3a3bb288"
+    root_url "https://github.com/xberg-io/xberg/releases/download/v1.3.10"
+    sha256 cellar: :any, arm64_linux: "931f1418d81eab97816e0a5294d7751520b88efccbc0e5c3530b529c7391d573"
+    sha256 cellar: :any, arm64_tahoe: "43e997d5bf9350144f1ee503bb34391902312455d81ab2afb6ac2890cf05bbb2"
+    sha256 cellar: :any, x86_64_linux: "3ec144e6fee1c20a50147a0eb9209a0cf5d879d00c98595c6de69f72279a11a4"
   end
 
   head "https://github.com/xberg-io/xberg.git", branch: "main"

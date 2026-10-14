@@ -4,15 +4,15 @@
 class Alef < Formula
   desc "Opinionated polyglot binding generator for Rust libraries"
   homepage "https://github.com/xberg-io/alef"
-  url "https://github.com/xberg-io/alef/archive/v0.107.7.tar.gz"
-  sha256 "4f8e503b8cb229a83b934c89fd2a20a55298fd4362db92ae9f459988848ad9d4"
+  url "https://github.com/xberg-io/alef/archive/v0.110.11.tar.gz"
+  sha256 "719a3ad183a1119307bb98ec3875662c7a50061603ff5f489eeafd37c61f11da"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/xberg-io/alef/releases/download/v0.107.6"
-    sha256 cellar: :any, arm64_linux: "e5c4019e495106f292ff9ad25a00c578d679b2f7f1d44355a470d74bed9715e0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "b7bd8b9e45830dc898009782daaf19eb292114e018f816071700901abb9bca30"
-    sha256 cellar: :any, x86_64_linux: "cb6e041c6aa177a2f19971f911e473413df45a1f115ac2599dda1fd28d269f81"
+    root_url "https://github.com/xberg-io/alef/releases/download/v0.110.11"
+    sha256 cellar: :any, arm64_linux: "a006e8859c4a50e89374755b2c25284c7a6a46479ff5360c4819caf4a231abb1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "c1551924ed178fd4b18f30ac6170537d0fc8f5351f7db97b0735f5f257fc5a9e"
+    sha256 cellar: :any, x86_64_linux: "03f9dbc1729a7fe6aa3503984e2c81c398f8ed8b3a02a621d7ba34480021541e"
   end
 
   head "https://github.com/xberg-io/alef.git", branch: "main"
