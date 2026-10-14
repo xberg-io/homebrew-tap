@@ -14,7 +14,6 @@ poly.local.toml
 .agents/mcp_config.json
 .agents/skills/
 .ai-rulez/.generated-manifest.local.json
-.ai-rulez/config.local.*
 .ai-rulez/local/
 .claude/agents/
 .claude/skills/
