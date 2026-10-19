@@ -4,37 +4,30 @@
 class LibhtmlToMarkdown < Formula
   desc "C library for HTML to Markdown conversion (FFI bindings)"
   homepage "https://github.com/xberg-io/html-to-markdown"
-  version "3.18.1"
+  version "3.18.2"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/xberg-io/html-to-markdown/releases/download/v3.18.1"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "1d32f7df1a7ed92595cd20c3678f9c97131f5956b9690d6c4f186278904b2176"
-    sha256 cellar: :any, arm64_tahoe: "9b5ee4120b3076115faa0126796e1a48874882bd31d0e1a3e176fd819d062ad8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b9042b42dad3c5f02500f4f2c00e10f2327fa80810f436bdb95018f18520816d"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "a9eef64d85c8aceb2f8571827e605b05fc15010e95beff53762cd407d6ed5abf"
+      sha256 "ab6a884642234e4d7de5e8dff5125c06ea45f5c91e51c633d22d93d437941caf"
     end
 
     on_intel do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "056f175176de568b0a50adbfa7b962f8b4e3b0439dcb2fed56834755df12b08c"
+      sha256 "11ca331d55cf5415367eab92c3790c02868e5ea36397aba11431af1395f5fbbd"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a15d9abfe039312195e679314559a944695326372cfec5885b570fa9a3acd1b7"
+      sha256 "27fce3efebbf13b7365bef1b09f1fc60fb6dee49f210ceb0ee98a6e49196f620"
     end
 
     on_intel do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/html-to-markdown-rs-ffi-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "716da1645d3369e343e94c38b3dbb37b7f1d6015b2272b7cd5c99855df64886e"
+      sha256 "6c15d02286a02dc83b7f4615e58cf5df1b4ec51f691384d5d072bae62b271727"
     end
   end
 
