@@ -4,15 +4,8 @@
 class HtmlToMarkdown < Formula
   desc "High-performance HTML to Markdown converter powered by Rust"
   homepage "https://github.com/xberg-io/html-to-markdown"
-  version "3.18.4"
+  version "3.18.5"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/xberg-io/html-to-markdown/releases/download/v3.18.4"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "758b5b45009e38db05e0f51c705c5e87d98a9963df4a12745dd5f1c94ccc032d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "b3d8ad14dbdb7bfdf3a2a6e806671b64b65a441aec7d03472da7d9d7af63d0a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3ce868bfe619b5ec502cd03ad6cbdccd11aa4d18ba42b72bcdab953c00b157de"
-  end
 
   # macOS is Apple Silicon only -- the CLI no longer ships an x86_64-apple-darwin build.
   # The url MUST stay at on_macos scope rather than inside an on_arm block. Homebrew
@@ -24,19 +17,19 @@ class HtmlToMarkdown < Formula
   # accurate message. Check with `brew readall --os=all --arch=all xberg-io/tap`.
   on_macos do
     url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/cli-aarch64-apple-darwin.tar.gz"
-    sha256 "d6e3740dd7545a6682eb4e3f74b2b10921f4b99368fe1b167c8f7673f348681d"
+    sha256 "1cf094900e5f66c6d6c8820288b861c533b17d8cb4825693e6f76b7ea7ea2f4b"
     depends_on arch: :arm64
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/cli-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "d8dc302a7cd2f5273741b5df24f3275d663d2393c359f57b645d29af1c95dfe5"
+      sha256 "47d879ff2509acde537167ba9fa2a5086f88128de23a493239cc10f88c865bfe"
     end
 
     on_intel do
       url "https://github.com/xberg-io/html-to-markdown/releases/download/v#{version}/cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "48f67b9982b773569d956dfe62940453490a58e39daded2a6d303c73704f3292"
+      sha256 "f52a4938294b01abcc4145d5ce9d8cd5ecbbb6e63ec8a23a3cb1cca6ed359a53"
     end
   end
 
