@@ -9,10 +9,10 @@ class Alef < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/xberg-io/alef/releases/download/v0.113.0"
-    sha256 cellar: :any, arm64_linux: "f9c60f30da379104f00c09681dd16e9c46e6e9125ecb9a27bf97a2d4e859840b"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "af488cbfbf68fe7441207182cfad9bb8ccbe7a3b62161c00ab99e0ca73714d8c"
-    sha256 cellar: :any, x86_64_linux: "23567b42770819776cd6da7ca0dd2a4bfb184d2591cd5ae221986d46e42d621b"
+    root_url "https://github.com/xberg-io/alef/releases/download/v0.113.1"
+    sha256 cellar: :any, arm64_linux: "76ba712a50296193780dff0267adb98889f6aab623a40efa1c4c07d1a4fa6862"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "0218f94404ced78ea309e14433d7f772644d46038068afe6b34bc4e3545cc249"
+    sha256 cellar: :any, x86_64_linux: "1467c9321a0bddcd94824f915e19269ecbd37a48a6d6f45bafecfa5f8d1f6068"
   end
 
   head "https://github.com/xberg-io/alef.git", branch: "main"
