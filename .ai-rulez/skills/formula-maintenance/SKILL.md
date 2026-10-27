@@ -16,13 +16,14 @@ x-ai-rulez:
 
 ### Formula Types
 
-**Source-build** (Rust/CMake, compile on install):
+**Source-build** (compile from the release source tarball via `cargo install`):
 
-- `xberg.rb`, `alef.rb`, `crawlberg.rb` — build from tarball via `cargo install`
+- `alef.rb`, `crawlberg.rb`, `liter-llm.rb`, `xberg.rb`
 
-**Binary-only** (pre-built platform-specific artifacts):
+**Release-asset** (download a pre-built per-platform artifact from the GitHub release):
 
-- `xberg-ffi.rb`, `libhtml-to-markdown.rb` — install pre-compiled `.dylib`/`.so`/`.a` + headers
+- `html-to-markdown.rb`, `ts-pack.rb` — CLI binaries
+- `libhtml-to-markdown.rb`, `libts-pack.rb` — FFI libraries (`.dylib`/`.so`/`.a` + headers)
 
 ### Version Bump Checklist
 
