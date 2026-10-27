@@ -37,7 +37,8 @@ review the bot commits when `verify-bottles` fails.
 
 ### Invariants
 
-- Keep `url` at `on_macos` scope with `depends_on arch: :arm64`, never inside `on_arm`: Homebrew evaluates every
-  os/arch pair, and one formula with no URL makes the whole tap untappable. Check with
+- When a formula ships no Intel macOS artifact (`html-to-markdown.rb`), put its macOS `url` at `on_macos` scope
+  with `depends_on arch: :arm64`, never in a lone `on_arm`: Homebrew evaluates every os/arch pair, and one formula
+  with no URL makes the whole tap untappable. Formulas with both archs use `on_arm`/`on_intel` pairs. Check with
   `brew readall --os=all --arch=all xberg-io/tap`.
 - Bottle URLs: `scripts/verify-bottle-urls.sh` (CI `verify-bottles`, on PRs, pushes and daily).
