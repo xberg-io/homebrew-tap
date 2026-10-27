@@ -1,7 +1,7 @@
 ---
 type: Playbook
 title: Formula Maintenance
-description: "Homebrew formula upkeep: source-build vs binary-only formulas, the version-bump checklist (url, sha256, bottles, root_url), building bottles. Use when editing a formula, bumping a release or updating bottle hashes."
+description: "Homebrew formula upkeep: source-build vs release-asset formulas, the version-bump checklist (url, sha256, bottles, root_url), building bottles. Use when editing a formula, bumping a release or updating bottle hashes."
 paths:
   - "Formula/**"
   - "scripts/build-bottles.sh"
