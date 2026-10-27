@@ -1,7 +1,7 @@
 ---
 type: Playbook
 title: Formula Maintenance
-description: "Homebrew formula upkeep: source-build vs release-asset formulas, the version-bump checklist (url, sha256, bottles, root_url), building bottles. Use when editing a formula, bumping a release or updating bottle hashes."
+description: "Homebrew formula upkeep: source-build vs release-asset formulas, release bots own versions and bottle blocks, the on_macos url invariant. Use when editing a formula or a bottle block."
 paths:
   - "Formula/**"
   - "scripts/build-bottles.sh"
@@ -25,16 +25,19 @@ x-ai-rulez:
 - `html-to-markdown.rb`, `ts-pack.rb` — CLI binaries
 - `libhtml-to-markdown.rb`, `libts-pack.rb` — FFI libraries (`.dylib`/`.so`/`.a` + headers)
 
-### Version Bump Checklist
+### Who writes the formulas
 
-1. Update `url` and `version` fields
-2. Update `sha256` for source tarball or per-platform binary tarballs
-3. For bottles: run `scripts/build-bottles.sh`, update bottle `sha256` values from output
-4. Verify `root_url` points to correct GitHub release tag
+Each source repo's release automation writes its formula and the `bottle do` block (bottles via the
+`xberg-io/actions` `homebrew-build-bottles` and `homebrew-merge-bottles` actions) and pushes the commits
+straight to `main`. Do not hand-bump a version or bottle hash: the next release overwrites it. Fix the
+cause in the source repo or the action instead. Work done here: repair a formula that breaks the tap, and
+review the bot commits when `verify-bottles` fails.
 
-### `scripts/build-bottles.sh`
+`scripts/build-bottles.sh` builds a local bottle for `xberg` only; it is not the release path.
 
-- Canonical script for building bottles on current platform
-- Runs `brew install --build-bottle` then `brew bottle`
-- Must be run on each target platform separately
-- Output includes sha256 hashes to paste into formula's `bottle do` block
+### Invariants
+
+- Keep `url` at `on_macos` scope with `depends_on arch: :arm64`, never inside `on_arm`: Homebrew evaluates every
+  os/arch pair, and one formula with no URL makes the whole tap untappable. Check with
+  `brew readall --os=all --arch=all xberg-io/tap`.
+- Bottle URLs: `scripts/verify-bottle-urls.sh` (CI `verify-bottles`, on PRs, pushes and daily).
