@@ -8,7 +8,7 @@ x-ai-rulez:
     priority: high
 ---
 
-# Area Map
+## Area Map
 
 Homebrew tap for the xberg-io CLIs.
 
