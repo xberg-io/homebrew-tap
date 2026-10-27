@@ -7,6 +7,13 @@ class HtmlToMarkdown < Formula
   version "3.19.0"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/xberg-io/html-to-markdown/releases/download/v3.19.0"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "e973dd781c5837d5b74bc7edf152dc9a04b9264a5aed8239540b3b0dac80bec4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "9d795fc9f3bfd47266a3d47992d85211613b8c3110417166dbfeb2c713e9e854"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "cb5f0c34aa9edd5f0fc475de2e4170d166faa192b918bc49d95ec97b704f0a1b"
+  end
+
   # macOS is Apple Silicon only -- the CLI no longer ships an x86_64-apple-darwin build.
   # The url MUST stay at on_macos scope rather than inside an on_arm block. Homebrew
   # validates a formula under EVERY os/arch pair, so an Intel-macOS simulation that finds no
