@@ -18,13 +18,6 @@ ref = "6e7f6a6793ea7380b916367e10a8acd13c3afbc3"
 path = 'modules/core'
 merge_strategy = 'local-override'
 
-[[includes]]
-name = 'xberg-languages'
-source = 'https://github.com/xberg-io/agent-conventions.git'
-ref = "6e7f6a6793ea7380b916367e10a8acd13c3afbc3"
-path = 'modules/languages'
-merge_strategy = 'local-override'
-
 [mcp]
 self_server_command = ["ai-rulez", "mcp"]
 # ~keep Skill discovery only: the full server lists 67 tools (~38k tokens of schema) at every session start.
