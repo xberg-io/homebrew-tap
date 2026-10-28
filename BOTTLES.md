@@ -41,8 +41,8 @@ This script:
 Bottles should be built in CI for each target platform:
 
 1. **Linux x86_64**: Build on Ubuntu (GitHub Actions or similar)
-2. **macOS ARM64**: Build on GitHub Actions' `macos-latest-large` runner
-3. **macOS Intel**: Build on GitHub Actions' `macos-13` runner (Intel)
+2. **macOS ARM64**: Build on GitHub Actions' `macos-26` runner
+3. **macOS Intel**: Build on GitHub Actions' `macos-26-intel` runner
 
 Each build should:
 
