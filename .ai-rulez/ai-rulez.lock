@@ -4,7 +4,7 @@
 version = 1
 ai_rulez_version = '5.9.2'
 scope = 'all'
-tree = 'sha256:30dd88e8edc52136503f871ce5bda157d3f1fd90a5556f065a13f71a0227bc44'
+tree = 'sha256:5de472734d17544b462ba7b0f6ed0e0dc352e1262183ad75b05fe767348e9e89'
 
 [[include]]
 name = 'xberg-core'
@@ -99,12 +99,6 @@ name = 'skill-authoring'
 source = 'builtin://universal/ai-governance/skills/skill-authoring/SKILL.md'
 commit = ''
 digest = 'sha256:7ab2b543dc6608f204c957fedfc55ae902d22fda9dc8a52252330ff9b1406ff1'
-
-[[served]]
-name = 'task-runner'
-source = 'builtin://universal/token-efficiency/skills/task-runner/SKILL.md'
-commit = ''
-digest = 'sha256:c57056e3a74a261b3a9d47638726c7d1f64c76b255838b6aaa3e635f3ffa8618'
 
 [[served]]
 name = 'taskfile-structure'
