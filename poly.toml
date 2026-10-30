@@ -72,7 +72,7 @@ enabled = true
 [[hooks.sources]]
 id = "ai-rulez"
 git = "https://github.com/Goldziher/ai-rulez.git"
-revision = "v5.9.2"
+revision = "v5.9.3"
 hooks = ["ai-rulez-validate"]
 [per-file-ignores]
 # Stylistic rules disabled repo-wide. Each is a formatting or idiom preference with no
