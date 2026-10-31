@@ -1,3 +1,3 @@
 # Subdirectories
 
-* [formula-maintenance](formula-maintenance/index.md)
+- [formula-maintenance](formula-maintenance/index.md)
