@@ -33,10 +33,12 @@ Bottles are automatically used when available for your platform. The formula fal
 
 Pre-built bottles are available for:
 
-- macOS ARM64 (Sequoia)
-- macOS ARM64 (Sonoma)
-- macOS Intel (Ventura and later)
-- Linux x86_64
+- macOS ARM64, macOS 11 (Big Sur) and later
+- macOS Intel, macOS 11 (Big Sur) and later
+- Linux x86_64 and ARM64
+
+Each formula has one macOS bottle per architecture, tagged `big_sur`. The bottles are built on macOS 26 with a
+deployment target of 11.0, and Homebrew uses a bottle on every macOS from its tag up. See [BOTTLES.md](BOTTLES.md).
 
 ## Uninstall
 

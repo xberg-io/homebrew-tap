@@ -22,6 +22,9 @@ class LiterLlm < Formula
   depends_on 'openssl@3' => :build
 
   def install
+    # Homebrew clears MACOSX_DEPLOYMENT_TARGET, so set it here: the bottle is built on
+    # macOS 26 and published under the big_sur tag, and must run on macOS 11 and later.
+    ENV["MACOSX_DEPLOYMENT_TARGET"] = "11.0" if OS.mac?
     system("cargo", "install", *std_cargo_args(path: "crates/liter-llm-cli"))
   end
 

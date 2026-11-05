@@ -14,10 +14,21 @@ Homebrew bottles are pre-compiled binaries packaged for specific macOS/Linux pla
 
 Pre-built bottles are available for:
 
-- **macOS ARM64 (Sequoia)** - Latest Apple Silicon Macs
-- **macOS ARM64 (Sonoma)** - Apple Silicon Macs (2021+)
-- **macOS Intel (Ventura)** - Intel-based Macs running Ventura or later
-- **Linux x86_64** - Standard 64-bit Linux systems
+- **macOS ARM64** - Apple Silicon Macs on macOS 11 (Big Sur) or later
+- **macOS Intel** - Intel Macs on macOS 11 (Big Sur) or later
+- **Linux x86_64 and ARM64** - Standard 64-bit Linux systems
+
+### The macOS floor
+
+Each formula has one macOS bottle per architecture: `arm64_big_sur` for Apple Silicon and `big_sur` for Intel.
+Homebrew installs a bottle on the macOS it is tagged for and on every newer macOS, so these two bottles cover
+macOS 11 and later.
+
+The bottles are built on the `macos-26` runner with a deployment target of 11.0. Homebrew removes
+`MACOSX_DEPLOYMENT_TARGET` from the build environment, so each formula that compiles from source sets
+`ENV["MACOSX_DEPLOYMENT_TARGET"] = "11.0"` at the start of `install`. The CI bottle step then retags the bottle from
+the host tag (for example `arm64_tahoe`) to the floor tag. Before the retag, it checks that no Mach-O file in the bottle
+needs a macOS newer than 11.0, and fails the build if one does.
 
 ## How Bottles are Built
 
@@ -40,9 +51,9 @@ This script:
 
 Bottles should be built in CI for each target platform:
 
-1. **Linux x86_64**: Build on Ubuntu (GitHub Actions or similar)
-2. **macOS ARM64**: Build on GitHub Actions' `macos-26` runner
-3. **macOS Intel**: Build on GitHub Actions' `macos-26-intel` runner
+1. **Linux x86_64 and ARM64**: Build on Ubuntu (GitHub Actions or similar)
+2. **macOS ARM64**: Build on GitHub Actions' `macos-26` runner, published as `arm64_big_sur`
+3. **macOS Intel**: Build on GitHub Actions' `macos-26-intel` runner, published as `big_sur`
 
 Each build should:
 
@@ -63,9 +74,9 @@ When bottles are ready for release:
    ```ruby
    bottle do
      root_url "https://github.com/xberg-io/xberg/releases/download/vX.Y.Z"
-     sha256 cellar: :any_skip_relocation, arm64_sequoia: "actual_hash_here"
-     sha256 cellar: :any_skip_relocation, arm64_sonoma: "actual_hash_here"
-     sha256 cellar: :any_skip_relocation, ventura: "actual_hash_here"
+     sha256 cellar: :any_skip_relocation, arm64_big_sur: "actual_hash_here"
+     sha256 cellar: :any_skip_relocation, big_sur: "actual_hash_here"
+     sha256 cellar: :any_skip_relocation, arm64_linux: "actual_hash_here"
      sha256 cellar: :any_skip_relocation, x86_64_linux: "actual_hash_here"
    end
    ```
@@ -78,7 +89,7 @@ When bottles are ready for release:
 
 When releasing a new version with bottles:
 
-- [ ] Build bottles for all 4 platforms
+- [ ] Build bottles for all 4 platforms (two macOS, two Linux)
 - [ ] Verify bottle SHA256 hashes
 - [ ] Upload `.tar.gz` files to GitHub Releases
 - [ ] Update `Formula/xberg.rb` with new version, SHA256, and bottle hashes
@@ -91,7 +102,7 @@ When releasing a new version with bottles:
 
 ### Installation uses source build instead of bottle
 
-1. Check macOS/Linux version matches supported platforms
+1. Check that the macOS version is 11 or later, or that the Linux platform is supported
 2. Verify SHA256 hashes in formula are correct
 3. Confirm bottles exist at the `root_url` with correct filenames
 4. Run `brew tap --repair xberg-io/tap` to refresh tap cache
@@ -101,7 +112,7 @@ When releasing a new version with bottles:
 Add placeholders to the formula and schedule a CI build for that platform:
 
 ```ruby
-sha256 cellar: :any_skip_relocation, arm64_ventura: "will_update_after_build"
+sha256 cellar: :any_skip_relocation, big_sur: "will_update_after_build"
 ```
 
 Then update with real hash after the build completes.

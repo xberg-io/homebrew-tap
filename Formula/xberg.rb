@@ -35,6 +35,9 @@ class Xberg < Formula
   end
 
   def install
+    # Homebrew clears MACOSX_DEPLOYMENT_TARGET, so set it here: the bottle is built on
+    # macOS 26 and published under the big_sur tag, and must run on macOS 11 and later.
+    ENV["MACOSX_DEPLOYMENT_TARGET"] = "11.0" if OS.mac?
     ENV["OPENSSL_DIR"] = Formula["openssl"].opt_prefix
 
     if OS.mac? && Hardware::CPU.intel?
