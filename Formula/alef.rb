@@ -20,6 +20,8 @@ class Alef < Formula
   depends_on "rust" => :build
 
   def install
+    # ~keep Bottles are tagged for macOS 15, the org floor; Homebrew would otherwise target the build host.
+    ENV["MACOSX_DEPLOYMENT_TARGET"] = "15.0" if OS.mac?
     system("cargo", "install", *std_cargo_args)
   end
 

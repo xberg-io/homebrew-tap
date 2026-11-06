@@ -22,6 +22,8 @@ class Crawlberg < Formula
   depends_on "rust" => :build
 
   def install
+    # ~keep Bottles are tagged for macOS 15, the org floor; Homebrew would otherwise target the build host.
+    ENV["MACOSX_DEPLOYMENT_TARGET"] = "15.0" if OS.mac?
     ENV["OPENSSL_DIR"] = Formula["openssl"].opt_prefix
     system("cargo", "install", "--features", "api,mcp,mcp-http", *std_cargo_args(path: "crates/crawlberg-cli"))
   end
