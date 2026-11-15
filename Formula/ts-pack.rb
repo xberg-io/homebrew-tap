@@ -4,37 +4,30 @@
 class TsPack < Formula
   desc "Tree-sitter language pack CLI - download and manage 371 parser grammars"
   homepage "https://github.com/xberg-io/tree-sitter-language-pack"
-  version "1.25.0"
+  version "1.25.2"
   license any_of: ["MIT", "Apache-2.0"]
-
-  bottle do
-    root_url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v1.25.0"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "ad1a19c0fedb1f7926a3cdc074a1c09defe469d962b45ff947f036b416ea804b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "934179a755eb000581f266b4ca642d000d24ec96b80fd7fe5782d4ebfde7d6ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "69fc7ac9104abfc7eea7d7386ac1d5cde2aee221fc530ccd1c5d579f57015411"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-aarch64-apple-darwin.tar.gz"
-      sha256 "7b972d1a26d96cdcdcc051ed328a93f081e70f27ee7b3084f0d624620397e9a9"
+      sha256 "09a09565eaaa0931863c0c5a2582af54d0ca863f1f6754bb34fee283ec9ca43e"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-x86_64-apple-darwin.tar.gz"
-      sha256 "eae9ef4bd73f4fb075514744639ab89fc639c91557673af3a389b2db51ece072"
+      sha256 "e68033b9f471e48fcfbfa3d8a8d05522268ae9ea03ab44c1e52a50d32b4b631e"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "fae241ee1e7ee17e2c80cb84b9545eab0a4869e7d11c2b255375b0da9a31ce55"
+      sha256 "5d5b9f283be87813fabceeee7e18cfedff400331d9a004eb5320e2d0996432dc"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c28dd7d37ce6111c889acb797c0131dfb217a98d6b4c7b49d00a2b1916a73936"
+      sha256 "5bfeb640d6fb6d8798017acd0dba71bac5dca676aa80ff2ebb6e6db62fa93a09"
     end
   end
 
