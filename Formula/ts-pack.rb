@@ -4,37 +4,30 @@
 class TsPack < Formula
   desc "Tree-sitter language pack CLI - download and manage 371 parser grammars"
   homepage "https://github.com/xberg-io/tree-sitter-language-pack"
-  version "1.25.2"
+  version "1.27.1"
   license any_of: ["MIT", "Apache-2.0"]
-
-  bottle do
-    root_url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v1.25.2"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "bbd04b398c38c32ae0cfbf63104f8cc685fc058bfa7365ba06073ced8e355ae8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "73735786bbb2da96f65ac52cc0feb5f04885ca9e3763a0907fdc8261b63c63eb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d1c4b7905c16a70a258cddbb9e3b042c4a579d9ade4a25e50b8f306653f20ead"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-aarch64-apple-darwin.tar.gz"
-      sha256 "09a09565eaaa0931863c0c5a2582af54d0ca863f1f6754bb34fee283ec9ca43e"
+      sha256 "961f9c829384ef2cbf72ae2fc9e964feb8ab8db4a73d8729f69ab3aa6c8b2e4b"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-x86_64-apple-darwin.tar.gz"
-      sha256 "e68033b9f471e48fcfbfa3d8a8d05522268ae9ea03ab44c1e52a50d32b4b631e"
+      sha256 "d4cd9b09134b7743fa2931209746a47ba6543282aa6f346484abfe6cd409ee02"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5d5b9f283be87813fabceeee7e18cfedff400331d9a004eb5320e2d0996432dc"
+      sha256 "c20008af8c80ad75895385740b3a23dfcaa9eb6e479c3aa0354f330ae725469c"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/ts-pack-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "5bfeb640d6fb6d8798017acd0dba71bac5dca676aa80ff2ebb6e6db62fa93a09"
+      sha256 "9ad98ecbb911be76b599e129264e92ea1b2c879df16d18960dacd24cf094016f"
     end
   end
 
