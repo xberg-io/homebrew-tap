@@ -4,37 +4,30 @@
 class LibtsPack < Formula
   desc "C library for tree-sitter language pack (FFI bindings)"
   homepage "https://github.com/xberg-io/tree-sitter-language-pack"
-  version "1.27.4"
+  version "1.28.0"
   license any_of: ["MIT", "Apache-2.0"]
-
-  bottle do
-    root_url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v1.27.4"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "f7d8d8c3bd8b0bbb06ce7b0536b4b9fd8399d545ad7cbf20659fdc19d8cbb40d"
-    sha256 cellar: :any, arm64_sequoia: "f34c591f825ade2cb86e9a52d31caa7679b0c8653c6208b5e2e9b2bcf93553cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "fb4d5ede63ab8d4027314d5f88d60c370baae3bdccf56f0e809e1ca4c1f63896"
-  end
 
   on_macos do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "df71b44d1f511c51b021466191fe8547291c3af488f30efeb9914353a33ab44e"
+      sha256 "93e6d1b5ef0f28553d32b460f0d4a8b86ad27c5362d6adbcb905eca98f5a5f6b"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "ae5ec1a5e1529925ed6773ec7aba1698e51b546e861c95d1ec91471248d1e4f4"
+      sha256 "1fa96b4733cbca55f5b0a11b6865f1ba5321ede2bab08914d74917574c412015"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "827a4e9c25ec0c8971fa9b47a8df9f676d054ba4c8201adb81e099d5062808ae"
+      sha256 "ec0657b6ec7a847dac20f4e3bbca1561e02f322636abbec00f4a9cdbcec0347f"
     end
 
     on_intel do
       url "https://github.com/xberg-io/tree-sitter-language-pack/releases/download/v#{version}/tree-sitter-language-pack-ffi-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "456470910a00bba5960ec9c60e6ace9cb10acf475332090a3b40d07cfb911108"
+      sha256 "576626ad0ab352cc9ac81a03e991516be20a2a1d06fe4c8c6041ea1f7ec0b141"
     end
   end
 
